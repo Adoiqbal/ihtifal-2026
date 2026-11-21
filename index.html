@@ -223,6 +223,18 @@ h3.sect{font-family:var(--f-script);font-weight:400;color:var(--gold-d);font-siz
 .rcard .cat{font-family:var(--f-caps);font-size:.74rem;letter-spacing:.1em;color:var(--gold-d);line-height:1.35}
 .rcard .nm{font-weight:700;color:var(--maroon);line-height:1.25;font-size:.95rem;overflow-wrap:anywhere}
 
+/* Panel anugerah: akademik (putih) dan sahsiah/khas (bingkai batik) */
+.aw-panel{border-radius:10px}
+.aw-panel.acad{margin-top:8px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);padding:28px clamp(14px,3vw,30px) 32px}
+.aw-head{text-align:center;margin-bottom:18px}
+.aw-title{font-family:var(--f-script);font-weight:400;font-size:clamp(2rem,7.5vw,2.7rem);color:var(--maroon);margin:0;line-height:1.1;text-wrap:balance}
+.aw-sub{font-family:var(--f-caps);font-size:.72rem;letter-spacing:.14em;color:var(--gold-d);margin-top:6px;line-height:1.6}
+.aw-panel.acad #levelView>h3.sect:first-child{margin-top:8px}
+.aw-panel.batik{margin-top:48px;padding:12px;background:url(img/batik-tile.jpg) 0 0/150px,var(--maroon);box-shadow:0 0 0 1px var(--gold-d),0 14px 34px rgba(61,18,24,.18)}
+.aw-panel.batik .aw-in{background:var(--ivory-2);border:1px solid var(--gold);border-radius:6px;padding:28px clamp(14px,3vw,30px) 34px;box-shadow:inset 0 0 0 5px var(--ivory-2),inset 0 0 0 6px var(--line)}
+.aw-panel.batik h3.sect{margin-top:10px}
+.aw-div{width:min(200px,50%);margin:34px auto 6px}
+.aw-panel.batik .sealed{grid-template-columns:repeat(2,minmax(0,1fr));max-width:640px;margin-inline:auto}
 /* Anugerah khas (rahsia) */
 .sealed{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,190px),1fr));gap:16px}
 .env{position:relative;aspect-ratio:4/3;border-radius:4px;overflow:hidden;background:url(img/batik-tile.jpg) 0 0/160px,var(--maroon);border:1px solid var(--gold);display:grid;place-items:center;text-align:center;padding:16px;color:var(--ivory);box-shadow:0 10px 24px rgba(61,18,24,.22)}
@@ -306,6 +318,14 @@ h3.sect{font-family:var(--f-script);font-weight:400;color:var(--gold-d);font-siz
   .curtain.l{left:-50%}.curtain.r{right:-50%}
   .arch{border-radius:200px 200px 14px 14px/150px 150px 14px 14px;padding-top:44px}
   .arch::before{border-radius:190px 190px 8px 8px/142px 142px 8px 8px}
+}
+@media (max-width:480px){
+  .cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .aw-panel.batik{padding:7px}
+  .aw-panel.batik .aw-in{padding:22px 12px 26px;box-shadow:inset 0 0 0 4px var(--ivory-2),inset 0 0 0 5px var(--line)}
+  .aw-panel.acad{padding:22px 12px 26px}
+  .aw-panel.batik .sealed{grid-template-columns:1fr;gap:12px}
+  .env{aspect-ratio:auto;min-height:132px}
 }
 @media (max-width:380px){
   body{font-size:17px}
@@ -563,20 +583,28 @@ h3.sect{font-family:var(--f-script);font-weight:400;color:var(--gold-d);font-siz
 
     <div style="text-align:center"><div class="ribbon rib">Senarai Penerima</div></div>
     <p class="lead">Tekan nama atau kad penerima untuk melihat paparan penuh.</p>
-    <div class="levels" role="tablist" aria-label="Pilih tahap" id="levels"></div>
-    <div id="levelView" role="tabpanel"></div>
+    <section class="aw-panel acad" aria-labelledby="acadTtl">
+      <div class="aw-head"><h3 class="aw-title" id="acadTtl">Anugerah Mengikut Tahap</h3><div class="aw-sub">Kedudukan dalam Kelas · Mata Pelajaran Terbaik · Prasekolah</div></div>
+      <div class="levels" role="tablist" aria-label="Pilih tahap" id="levels"></div>
+      <div id="levelView" role="tabpanel"></div>
+    </section>
 
-    <h3 class="sect">Anugerah Sahsiah Murid (QR)</h3><span class="rule"></span>
-    <div class="cards stagger" id="sahsiah"></div>
-
-    <h3 class="sect" style="margin-top:44px">Anugerah Khas</h3><span class="rule"></span>
-    <p class="lead">Penerima anugerah khas akan diumumkan pada hari majlis. Nantikan kejutannya!</p>
-    <div class="sealed stagger">
+    <section class="aw-panel batik" aria-labelledby="khasTtl">
+      <div class="aw-in">
+        <div class="aw-head"><h3 class="aw-title" id="khasTtl">Anugerah Sahsiah &amp; Anugerah Khas</h3><div class="aw-sub">Sahsiah Murid (QR) · Tokoh · Piala Pusingan</div></div>
+        <h3 class="sect">Anugerah Sahsiah Murid (QR)</h3><span class="rule"></span>
+        <div class="cards stagger" id="sahsiah"></div>
+        <img class="orn aw-div" src="img/ornament.png" alt="">
+        <h3 class="sect">Anugerah Khas</h3><span class="rule"></span>
+        <p class="lead">Penerima anugerah khas akan diumumkan pada hari majlis. Nantikan kejutannya!</p>
+        <div class="sealed stagger">
       <div class="env"><div><div class="seal">E</div><b>Anugerah Tokoh Hijrah</b><small>Diumumkan pada hari majlis</small></div></div>
       <div class="env"><div><div class="seal">E</div><b>Anugerah Tokoh Kokurikulum</b><small>Diumumkan pada hari majlis</small></div></div>
       <div class="env"><div><div class="seal">E</div><b>Anugerah Tokoh Pelajar Mithali</b><small>Diumumkan pada hari majlis</small></div></div>
       <div class="env"><div><div class="seal">E</div><b>Piala Pusingan Kelas Terbaik</b><small>Diumumkan pada hari majlis</small></div></div>
-    </div>
+        </div>
+      </div>
+    </section>
   </div>
 </section>
 
@@ -777,7 +805,7 @@ lv.addEventListener('click',function(e){
   renderLevel(b.dataset.k);
 });
 renderLevel('pra');
-document.getElementById('sahsiah').innerHTML=IDX.sah.map(function(ri){return recipientCard(ri,'Sahsiah Murid (QR)')}).join('');
+document.getElementById('sahsiah').innerHTML=IDX.sah.map(function(ri){return recipientCard(ri,'')}).join('');
 
 /* Klik mana-mana penerima → paparan penerima */
 document.addEventListener('click',function(e){
