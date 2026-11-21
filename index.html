@@ -1,0 +1,863 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#3f0a11">
+<meta name="description" content="Buku program digital Majlis Anugerah Kecemerlangan dan Graduasi SMIIPSU | EHSAN 2026">
+<title>Majlis Anugerah Kecemerlangan 2026</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Cinzel:wght@500;600&family=Amiri&display=swap">
+<style>
+/* Layout: buku program yang ditatal — tirai batik membuka kulit, setiap bab dibuka dengan sutera, halaman krim berbingkai emas */
+:root{
+  --maroon:#6e1521; --maroon-d:#3f0a11; --wine:#922736;
+  --gold:#c4963e; --gold-d:#9a6d1f; --gold-l:#ecd59f;
+  --paper:#fffaf1; --cream:#f7efe0; --ink:#3d1218; --muted:#7b5a4d;
+  --f-script:"Pinyon Script","Great Vibes",cursive;
+  --f-display:"Cormorant Garamond","Garamond","Times New Roman",serif;
+  --f-caps:"Cinzel","Trajan Pro","Times New Roman",serif;
+  --f-arab:"Amiri","Traditional Arabic","Times New Roman",serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{background:var(--maroon-d);color:var(--ink);font-family:var(--f-display);font-size:19px;line-height:1.55;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--maroon-d)}
+img{max-width:100%;display:block}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:900px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+/* ---------- KULIT / HERO ---------- */
+.hero{position:relative;overflow:hidden;background:var(--maroon-d) url(img/hero-batik.jpg) center/cover;padding-block:56px 72px;isolation:isolate}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,transparent 30%,rgba(30,4,8,.55) 100%);z-index:-1}
+#sparkle{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:3}
+.valance{position:absolute;inset:0 0 auto;height:54px;z-index:5;background:linear-gradient(180deg,rgba(0,0,0,.35),transparent 70%),url(img/batik-tile.jpg) 0 0/180px;
+  -webkit-mask:radial-gradient(42px 30px at 50% 0,#000 98%,transparent 100%) 0 0/84px 54px repeat-x,linear-gradient(#000,#000) 0 0/100% 24px no-repeat;
+  mask:radial-gradient(42px 30px at 50% 0,#000 98%,transparent 100%) 0 0/84px 54px repeat-x,linear-gradient(#000,#000) 0 0/100% 24px no-repeat}
+.valance-fringe{position:absolute;left:0;right:0;top:22px;height:3px;z-index:6;background:repeating-linear-gradient(90deg,var(--gold) 0 6px,transparent 6px 10px);opacity:.8}
+.curtain{position:absolute;top:0;bottom:0;width:54%;z-index:4;
+  background:
+    linear-gradient(90deg,rgba(20,0,4,.55),rgba(255,230,200,.08) 9%,rgba(20,0,4,.45) 18%,rgba(255,230,200,.1) 30%,rgba(20,0,4,.5) 42%,rgba(255,230,200,.06) 56%,rgba(20,0,4,.45) 70%,rgba(255,230,200,.1) 84%,rgba(20,0,4,.6)),
+    url(img/batik-tile.jpg) 0 0/200px;
+  box-shadow:0 0 40px rgba(0,0,0,.6)}
+.curtain::after{content:"";position:absolute;top:0;bottom:0;width:6px;background:linear-gradient(var(--gold-l),var(--gold),var(--gold-d))}
+.curtain.l{left:-46%;border-radius:0 0 60% 0/0 0 18% 0}
+.curtain.l::after{right:0}
+.curtain.r{right:-46%;border-radius:0 0 0 60%/0 0 0 18%}
+.curtain.r::after{left:0}
+.cover{position:relative;z-index:2;max-width:540px;margin-inline:auto}
+.arch{position:relative;background:var(--paper);border-radius:270px 270px 18px 18px/230px 230px 18px 18px;padding:64px 28px 34px;text-align:center;
+  box-shadow:0 0 0 3px var(--gold),0 0 0 9px var(--maroon),0 0 0 11px var(--gold-d),0 30px 60px rgba(0,0,0,.55)}
+.arch::before{content:"";position:absolute;inset:10px;border:1px solid var(--gold);border-radius:260px 260px 12px 12px/220px 220px 12px 12px;pointer-events:none}
+.logos{display:flex;justify-content:center;align-items:center;gap:18px}
+.logos img{height:76px;width:auto}
+.logos i{width:1px;height:60px;background:var(--gold)}
+.t-majlis{font-family:var(--f-display);font-weight:700;color:var(--maroon);font-size:clamp(2.4rem,9vw,3.4rem);line-height:1;margin:22px 0 0}
+.t-script{font-family:var(--f-script);color:var(--maroon);font-weight:400;line-height:.95;font-size:clamp(2.6rem,11vw,4.2rem);margin:0}
+.t-script.s2{font-size:clamp(3rem,13vw,5rem)}
+.t-grad{font-family:var(--f-display);font-weight:700;color:var(--maroon);font-size:clamp(1.7rem,6.5vw,2.4rem);line-height:1;margin:0}
+.t-org{font-family:var(--f-caps);font-size:.78rem;letter-spacing:.18em;color:var(--ink);margin-top:8px}
+.year{display:flex;align-items:center;justify-content:center;gap:14px;margin:18px 0 6px;font-family:var(--f-caps);font-size:2rem;color:var(--gold-d)}
+.year::before,.year::after{content:"";height:1px;width:64px;background:linear-gradient(90deg,transparent,var(--gold))}
+.year::after{transform:scaleX(-1)}
+.motto{font-weight:600;font-style:italic;font-size:1.2rem;color:var(--maroon);line-height:1.3;margin:6px 0 18px;text-wrap:balance}
+.when{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;border-block:1px solid var(--gold);padding-block:14px}
+.when .side{font-family:var(--f-caps);font-size:.8rem;letter-spacing:.06em;color:var(--maroon);line-height:1.5}
+.when .date{border-inline:1px solid var(--gold);padding-inline:16px}
+.when .mon{font-family:var(--f-caps);font-size:.8rem;letter-spacing:.2em;color:var(--maroon)}
+.when .day{font-family:var(--f-display);font-size:4rem;line-height:.9;color:var(--gold-d);font-weight:600}
+.legacy{font-family:var(--f-caps);font-size:.72rem;letter-spacing:.14em;color:var(--muted);margin-top:16px;line-height:1.7}
+.countdown{display:flex;justify-content:center;gap:10px;margin-top:26px;position:relative;z-index:2}
+.countdown div{min-width:68px;text-align:center;padding:8px 6px;border:1px solid rgba(236,213,159,.5);border-radius:10px;background:rgba(40,4,10,.55);backdrop-filter:blur(3px);color:var(--gold-l)}
+.countdown b{display:block;font-family:var(--f-display);font-size:1.9rem;line-height:1;font-variant-numeric:tabular-nums;color:#fff3d6}
+.countdown span{font-family:var(--f-caps);font-size:.7rem;letter-spacing:.14em}
+.cd-label{text-align:center;color:var(--gold-l);font-family:var(--f-caps);font-size:.7rem;letter-spacing:.2em;margin-top:28px;position:relative;z-index:2}
+.scrollcue{display:block;width:max-content;margin:22px auto 0;color:var(--gold-l);font-family:var(--f-caps);font-size:.7rem;letter-spacing:.24em;text-decoration:none;position:relative;z-index:2}
+.scrollcue::after{content:"";display:block;width:1px;height:34px;margin:8px auto 0;background:linear-gradient(var(--gold-l),transparent);animation:cue 2s ease-in-out infinite}
+@keyframes cue{0%,100%{transform:scaleY(.4);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}}
+
+/* ---------- NAV ---------- */
+.toc{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--maroon-d);border-bottom:1px solid rgba(196,150,62,.45);box-shadow:0 6px 18px rgba(0,0,0,.3)}
+.toc ul{list-style:none;margin:0;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;padding-block:8px}
+.toc ul::-webkit-scrollbar{display:none}
+.toc a{display:flex;align-items:center;min-height:40px;white-space:nowrap;padding:8px 16px;border-radius:999px;color:var(--gold-l);text-decoration:none;font-family:var(--f-caps);font-size:.78rem;letter-spacing:.1em;transition:background .3s,color .3s}
+.toc a.on{background:var(--gold);color:var(--maroon-d)}
+
+/* ---------- PEMBUKA BAB ---------- */
+.opener{position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 50%,#fffdf8,var(--cream) 75%);text-align:center;padding-block:84px;isolation:isolate}
+.opener .silk{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+.orn{width:min(300px,70%);margin-inline:auto}
+.orn.flip{transform:scaleY(-1)}
+.opener h2{font-family:var(--f-script);font-weight:400;color:var(--gold-d);font-size:clamp(3rem,12vw,5.2rem);line-height:1.05;margin:10px 0;text-shadow:0 2px 6px rgba(120,80,20,.18);text-wrap:balance}
+.opener h2 small{display:block;font-family:var(--f-display);font-weight:700;font-size:.62em;letter-spacing:.06em;color:var(--maroon);line-height:1}
+.opener .sub{font-family:var(--f-caps);font-size:.72rem;letter-spacing:.24em;color:var(--muted)}
+
+/* ---------- HALAMAN ---------- */
+.page{position:relative;background:var(--paper);padding-block:56px 72px}
+.page::before,.page::after{content:"";position:absolute;top:0;bottom:0;width:30px;background:url(img/border-gold.png) center top/30px auto repeat-y;opacity:.75;pointer-events:none}
+.page::before{left:4px}.page::after{right:4px}
+.page>.wrap{padding-left:max(44px,env(safe-area-inset-left,0px));padding-right:max(44px,env(safe-area-inset-right,0px))}
+.page.tint{background:var(--cream)}
+.ribbon{display:inline-block;position:relative;font-family:var(--f-script);font-size:clamp(1.9rem,7vw,2.6rem);color:#fff7e6;padding:6px 34px 10px;margin:0 0 26px;
+  background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(0,0,0,.2)),url(img/batik-tile.jpg) 0 0/120px,var(--maroon);
+  clip-path:polygon(0 0,100% 0,96% 50%,100% 100%,0 100%,4% 50%);line-height:1.2}
+h3.sect{font-family:var(--f-script);font-weight:400;color:var(--gold-d);font-size:clamp(1.9rem,7vw,2.5rem);text-align:center;margin:28px 0 4px;line-height:1.1}
+.rule{display:block;width:min(260px,60%);height:12px;margin:0 auto 18px;background:linear-gradient(90deg,transparent,var(--gold) 20%,var(--gold) 80%,transparent) center/100% 1px no-repeat}
+.rule::after{content:"";display:block;width:9px;height:9px;margin:1px auto 0;background:var(--gold);transform:rotate(45deg)}
+.lead{text-align:center;color:var(--muted);font-style:italic;max-width:60ch;margin:0 auto 20px}
+
+/* Sekapur sirih */
+.letter{display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:36px;align-items:start}
+.letter p{margin:0 0 14px;text-align:justify;hyphens:auto}
+.ayat{font-family:var(--f-arab);direction:rtl;text-align:right!important;font-size:1.45rem;color:var(--maroon);line-height:1.9;margin:4px 0 2px!important}
+.maksud{font-style:italic;color:var(--muted)}
+.portrait{position:sticky;top:90px}
+.archframe{aspect-ratio:3/4;border-radius:999px 999px 8px 8px/70% 70% 8px 8px;overflow:hidden;padding:6px;background:linear-gradient(160deg,var(--gold-l),var(--gold-d));box-shadow:0 14px 30px rgba(61,18,24,.25)}
+.archframe>*{width:100%;height:100%;border-radius:inherit;object-fit:cover;object-position:50% 12%;background:var(--cream)}
+.sign{text-align:center;margin-top:14px;line-height:1.35}
+.sign b{display:block;font-size:1.1rem;color:var(--maroon)}
+.sign span{font-size:.9rem;color:var(--muted)}
+
+/* Atur cara */
+.timeline{position:relative;list-style:none;margin:0;padding:0}
+.timeline::before{content:"";position:absolute;left:94px;top:8px;bottom:8px;width:2px;background:rgba(196,150,62,.25)}
+.timeline .line{position:absolute;left:94px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--gold-l),var(--gold),var(--gold-d));transform-origin:top;transform:scaleY(1)}
+.slot{display:grid;grid-template-columns:80px minmax(0,1fr);gap:30px;padding-block:14px;position:relative}
+.slot time{justify-self:end;font-family:var(--f-caps);font-size:.82rem;font-weight:600;color:#fff6e3;background:var(--maroon);padding:6px 10px;border-radius:6px;height:max-content;white-space:nowrap;font-variant-numeric:tabular-nums}
+.slot::after{content:"";position:absolute;left:89px;top:22px;width:12px;height:12px;border-radius:50%;background:var(--paper);border:2px solid var(--gold)}
+.slot h4{font-family:var(--f-caps);font-size:.92rem;letter-spacing:.06em;color:var(--maroon);margin:4px 0 6px}
+.slot ul{margin:0 0 12px;padding-left:18px}
+.slot li{margin:2px 0}
+.slot li::marker{color:var(--gold)}
+
+/* Objektif */
+.obj{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.obj li{display:grid;grid-template-columns:40px minmax(0,1fr);gap:14px;align-items:start;padding:16px 18px;background:#fff;border:1px solid rgba(196,150,62,.35);border-radius:4px}
+.obj li::before{content:"";width:34px;height:34px;background:var(--gold);-webkit-mask:url(img/ornament.png) center/contain no-repeat;mask:url(img/ornament.png) center/contain no-repeat;margin-top:2px}
+
+/* Jawatankuasa */
+.induk{display:grid;gap:4px;text-align:center;margin-bottom:34px}
+.role{font-family:var(--f-script);color:var(--gold-d);font-size:1.8rem;line-height:1.1;margin-top:14px}
+.who{line-height:1.4}
+.who small{display:block;color:var(--muted);font-size:.85rem}
+.units{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));gap:22px 28px}
+.unit{text-align:center}
+.unit h5{font-family:var(--f-script);font-weight:400;font-size:1.6rem;color:var(--gold-d);margin:0;line-height:1.15}
+.unit h5::after{content:"";display:block;height:1px;margin:6px auto 8px;width:70%;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.unit p{margin:0;font-size:.98rem;line-height:1.5}
+
+/* Semak nama */
+.finder{background:var(--maroon-d) url(img/batik-tile.jpg) 0 0/220px;border:1px solid var(--gold);border-radius:6px;padding:26px 22px;color:var(--gold-l);text-align:center;box-shadow:0 18px 40px rgba(61,18,24,.3);margin-bottom:40px;position:relative}
+.finder::before{content:"";position:absolute;inset:6px;border:1px solid rgba(236,213,159,.35);border-radius:3px;pointer-events:none}
+.finder h3{font-family:var(--f-script);font-weight:400;font-size:2.3rem;margin:0;color:#fff2d2;line-height:1.1}
+.finder p{margin:4px 0 16px;font-size:1rem}
+.finder input{min-height:46px;font-size:16px!important;width:100%;max-width:460px;padding:12px 16px;border-radius:999px;border:1px solid var(--gold);background:var(--paper);color:var(--ink);font:inherit;font-size:1.05rem;text-align:center}
+.results{display:grid;gap:12px;margin-top:18px;text-align:left;position:relative}
+.res{background:var(--paper);color:var(--ink);border-radius:4px;padding:14px 16px;border-left:4px solid var(--gold)}
+.res .nm{font-family:var(--f-display);font-weight:700;color:var(--maroon);font-size:1.08rem;letter-spacing:.02em}
+.res ul{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:8px}
+.res li{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;border-top:1px dashed rgba(196,150,62,.45);padding-top:8px}
+.res li div{min-width:0}
+.res li b{display:block;font-size:.98rem}
+.res li span{color:var(--muted);font-size:.9rem}
+.btn{min-height:38px;cursor:pointer;border:1px solid var(--gold-d);background:linear-gradient(var(--gold-l),var(--gold));color:var(--maroon-d);font-family:var(--f-caps);font-size:.68rem;letter-spacing:.1em;font-weight:600;padding:8px 14px;border-radius:999px;white-space:nowrap}
+.btn:hover{filter:brightness(1.06)}
+.empty{color:var(--gold-l);font-style:italic;text-align:center}
+
+/* Tab tahap */
+.levels{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin:4px 0 26px}
+.levels button{min-height:40px;cursor:pointer;background:transparent;border:1px solid var(--gold);color:var(--maroon);padding:7px 14px;border-radius:999px;font-family:var(--f-caps);font-size:.72rem;letter-spacing:.08em}
+.levels button[aria-selected="true"]{background:var(--maroon);border-color:var(--maroon);color:#fff3d8}
+.podium{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:end;margin-bottom:10px}
+.pod{text-align:center;background:#fff;border:1px solid rgba(196,150,62,.4);border-radius:4px;padding:18px 12px 16px;position:relative}
+.pod.p1{order:2;padding-top:30px;box-shadow:0 12px 28px rgba(110,21,33,.14);border-color:var(--gold)}
+.pod.p2{order:1}.pod.p3{order:3}
+.medal{width:54px;height:54px;margin:-44px auto 10px;border-radius:50%;display:grid;place-items:center;font-family:var(--f-display);font-weight:700;font-size:1.5rem;color:var(--maroon-d);box-shadow:0 0 0 3px var(--paper),0 0 0 4px currentColor,0 6px 14px rgba(0,0,0,.2)}
+.p1 .medal{background:radial-gradient(circle at 35% 30%,#fff1c4,#d8a945 60%,#9a6d1f);color:#8a5d12;width:64px;height:64px;margin-top:-58px;font-size:1.8rem}
+.p2 .medal{background:radial-gradient(circle at 35% 30%,#fff,#c9c3bb 60%,#8f877d);color:#6f685f}
+.p3 .medal{background:radial-gradient(circle at 35% 30%,#ffe2c7,#c98a55 60%,#8a5228);color:#7d4a22}
+.medal b{color:var(--maroon-d)}
+.pod .rk{font-family:var(--f-caps);font-size:.72rem;letter-spacing:.16em;color:var(--muted)}
+.pod .nm{font-weight:700;color:var(--maroon);line-height:1.25;margin-top:4px;font-size:.98rem;overflow-wrap:anywhere}
+.subjects{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));gap:10px}
+.subj{background:#fff;border:1px solid rgba(196,150,62,.35);border-radius:4px;padding:12px 14px}
+.subj .sj{font-family:var(--f-caps);font-size:.72rem;letter-spacing:.12em;color:var(--gold-d)}
+.subj .nm{font-weight:700;color:var(--ink);line-height:1.25;margin-top:2px;overflow-wrap:anywhere}
+.gradlist{list-style:none;margin:0 auto;padding:0;max-width:560px;display:grid;gap:8px;text-align:center}
+.gradlist li{font-weight:700;color:var(--maroon);padding:10px;border-bottom:1px solid rgba(196,150,62,.4)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,135px),1fr));gap:22px 18px}
+.pc{text-align:center}
+.pc .archframe{max-width:170px;margin:0 auto 10px;background:linear-gradient(160deg,#c33a3a,var(--maroon) 55%,var(--maroon-d))}
+.pc .tag{display:inline-block;font-family:var(--f-caps);font-size:.7rem;letter-spacing:.1em;background:var(--gold);color:var(--maroon-d);padding:4px 10px;border-radius:2px;margin-bottom:6px}
+.pc .nm{font-weight:700;color:var(--maroon);line-height:1.25;font-size:.95rem;overflow-wrap:anywhere}
+.mono{display:grid!important;place-items:center;font-family:var(--f-script);font-size:4rem;color:var(--gold-d);background:var(--cream)!important}
+
+/* Anugerah khas (rahsia) */
+.sealed{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,190px),1fr));gap:16px}
+.env{position:relative;aspect-ratio:4/3;border-radius:4px;overflow:hidden;background:var(--maroon) url(img/batik-tile.jpg) 0 0/160px;border:1px solid var(--gold);display:grid;place-items:center;text-align:center;padding:16px;color:#fff3d8;box-shadow:0 10px 24px rgba(61,18,24,.25)}
+.env::before{content:"";position:absolute;inset:0;background:linear-gradient(155deg,transparent 49.6%,rgba(236,213,159,.5) 50%,transparent 50.4%),linear-gradient(25deg,transparent 49.6%,rgba(236,213,159,.5) 50%,transparent 50.4%);background-size:100% 60%;background-repeat:no-repeat}
+.env::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,240,200,.35) 45%,transparent 60%);background-size:250% 100%;animation:shine 4.5s ease-in-out infinite}
+@keyframes shine{from{background-position:120% 0}to{background-position:-120% 0}}
+.env .seal{width:52px;height:52px;border-radius:50%;margin:0 auto 8px;background:radial-gradient(circle at 35% 30%,#f3dc9f,#c4963e 55%,#8a5d12);display:grid;place-items:center;color:var(--maroon-d);font-family:var(--f-script);font-size:1.7rem;box-shadow:0 4px 10px rgba(0,0,0,.4);position:relative;z-index:1}
+.env b{position:relative;z-index:1;font-family:var(--f-caps);font-size:.78rem;letter-spacing:.08em;line-height:1.4;display:block}
+.env small{position:relative;z-index:1;display:block;font-style:italic;color:var(--gold-l);margin-top:4px;font-size:.85rem}
+.note{font-size:.9rem;color:var(--muted);text-align:center;font-style:italic;margin-top:18px}
+
+/* Penutup */
+.closing{position:relative;overflow:hidden;background:var(--maroon-d) url(img/hero-batik.jpg) center 70%/cover;text-align:center;color:var(--gold-l);padding-block:90px;isolation:isolate}
+.closing::after{content:"";position:absolute;inset:0;background:rgba(40,5,10,.55);z-index:-1}
+#petals{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+.closing .wrap{position:relative;z-index:1}
+.closing h2{font-family:var(--f-script);font-weight:400;font-size:clamp(3.4rem,14vw,6rem);color:#fff1cf;margin:0;line-height:1}
+.closing p{max-width:52ch;margin:10px auto}
+.closing .legacy{color:var(--gold-l)}
+.foot{font-family:var(--f-caps);font-size:.72rem;letter-spacing:.16em;opacity:.8;margin-top:28px}
+
+/* Modal kad */
+.modal{position:fixed;inset:0;z-index:80;background:rgba(25,3,7,.86);display:grid;place-items:center;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.modal .box{max-width:420px;width:100%;text-align:center;color:var(--gold-l)}
+.modal img{width:100%;border-radius:4px;box-shadow:0 20px 50px rgba(0,0,0,.6);-webkit-touch-callout:default}
+.modal p{font-size:.95rem;margin:12px 0}
+.modal .row{display:flex;gap:10px;justify-content:center}
+.ghost{min-height:42px;cursor:pointer;background:transparent;border:1px solid var(--gold-l);color:var(--gold-l);font-family:var(--f-caps);font-size:.7rem;letter-spacing:.12em;padding:9px 18px;border-radius:999px}
+
+@media (max-width:720px){
+  body{font-size:18px}
+  .letter p{text-align:left;hyphens:manual}
+  .letter{grid-template-columns:1fr}
+  .portrait{position:static;max-width:200px;margin:0 auto;order:-1}
+  .page::before,.page::after{width:18px;background-size:18px auto;left:2px}
+  .page::after{left:auto;right:2px}
+  .page>.wrap{padding-left:max(30px,env(safe-area-inset-left,0px));padding-right:max(30px,env(safe-area-inset-right,0px))}
+  .timeline::before,.timeline .line{left:72px}
+  .slot{grid-template-columns:62px minmax(0,1fr);gap:22px}
+  .slot::after{left:67px}
+  .slot time{font-size:.7rem;padding:5px 6px}
+  .podium{grid-template-columns:1fr;gap:34px;margin-top:30px}
+  .pod.p1,.pod.p2,.pod.p3{order:0}
+  .when{grid-template-columns:1fr;gap:8px}
+  .when .date{border-inline:0;border-block:1px solid var(--gold);padding-block:8px}
+  .logos img{height:62px}
+  .countdown div{min-width:60px}
+}
+@media (max-width:380px){
+  body{font-size:17px}
+  .arch{padding:54px 18px 28px}
+  .logos img{height:52px}
+  .countdown{gap:6px}
+  .countdown div{min-width:0;flex:1 1 0}
+  .countdown b{font-size:1.6rem}
+  .page>.wrap{padding-left:max(26px,env(safe-area-inset-left,0px));padding-right:max(26px,env(safe-area-inset-right,0px))}
+  .finder{padding:22px 14px}
+  .res li{flex-direction:column;align-items:stretch}
+  .res li .btn{align-self:flex-start}
+}
+@media (max-height:500px) and (orientation:landscape){
+  .hero{padding-block:40px 48px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .env::after,.scrollcue::after{animation:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= KULIT ================= -->
+<header class="hero" id="kulit">
+  <canvas id="sparkle" aria-hidden="true"></canvas>
+  <div class="valance" aria-hidden="true"></div><div class="valance-fringe" aria-hidden="true"></div>
+  <div class="curtain l" aria-hidden="true"></div><div class="curtain r" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="cover">
+      <div class="arch">
+        <div class="logos h-in"><img src="img/logo-smiip.png" alt="Logo Sekolah Menengah Islam Pintar"><i></i><img src="img/logo-ehsan.png" alt="Logo EHSAN Integrated School"></div>
+        <h1 style="margin:0">
+          <span class="t-majlis h-in" style="display:block">Majlis</span>
+          <span class="t-script h-in" style="display:block">Anugerah</span>
+          <span class="t-script s2 h-in" style="display:block">Kecemerlangan</span>
+          <span class="t-grad h-in" style="display:block">dan Graduasi</span>
+        </h1>
+        <div class="t-org h-in">SMIIPSU &nbsp;|&nbsp; EHSAN</div>
+        <div class="year h-in">2026</div>
+        <p class="motto h-in">“Menyemai Akhlak, Menjulang Ilmu, Menimba Bakti”</p>
+        <div class="when h-in">
+          <div class="side">8.00 Pagi<br>hingga<br>12.00 Tengah Hari</div>
+          <div class="date"><div class="mon">Disember</div><div class="day">04</div><div class="mon">Jumaat</div></div>
+          <div class="side">Dewan Kuliah 500<br>UiTM<br>Puncak Alam</div>
+        </div>
+        <div class="legacy h-in">Legacy of the Walking Quran<br>Legacy of the Excellencies</div>
+      </div>
+    </div>
+    <div class="cd-label" id="cdLabel">Menghitung hari ke majlis</div>
+    <div class="countdown" id="countdown" aria-live="off">
+      <div><b id="cdD">--</b><span>Hari</span></div>
+      <div><b id="cdH">--</b><span>Jam</span></div>
+      <div><b id="cdM">--</b><span>Minit</span></div>
+      <div><b id="cdS">--</b><span>Saat</span></div>
+    </div>
+    <a class="scrollcue" href="#sekapur">Buka buku program</a>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Isi kandungan">
+  <div class="wrap"><ul>
+    <li><a href="#sekapur">Sekapur Sirih</a></li>
+    <li><a href="#aturcara">Atur Cara</a></li>
+    <li><a href="#objektif">Objektif</a></li>
+    <li><a href="#jawatankuasa">Jawatankuasa</a></li>
+    <li><a href="#penerima">Penerima Anugerah</a></li>
+    <li><a href="#smiipsu">SMIIPSU</a></li>
+  </ul></div>
+</nav>
+
+<main>
+<!-- ================= SEKAPUR SIRIH ================= -->
+<section class="opener" id="sekapur" data-chapter>
+  <canvas class="silk" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <img class="orn o-top" src="img/ornament.png" alt="">
+    <h2 class="o-title">Sekapur Sirih,<br>Seulas Pinang</h2>
+    <img class="orn flip o-bot" src="img/ornament.png" alt="">
+  </div>
+</section>
+<section class="page">
+  <div class="wrap">
+    <div class="letter">
+      <div class="reveal-group">
+        <p>Bismillahirrahmanirrahim.</p>
+        <p>Assalamualaikum w.b.t. dan salam sejahtera,</p>
+        <p>Alhamdulillah, setinggi-tinggi kesyukuran dipanjatkan ke hadrat Allah S.W.T. Dengan izin, limpah rahmat dan kasih sayang-Nya, pada hari yang penuh berkat ini kita dapat bersama-sama berdiri megah meraikan Majlis Anugerah Kecemerlangan SMIIPSU &amp; EHSAN 2026.</p>
+        <p>Firman Allah S.W.T. dalam Surah Al-Mujadalah, ayat 11:</p>
+        <p class="ayat" lang="ar">يَرْفَعِ اللَّهُ الَّذِينَ آمَنُوا مِنكُمْ وَالَّذِينَ أُوتُوا الْعِلْمَ دَرَجَاتٍ</p>
+        <p class="maksud">Maksudnya: “Allah meninggikan darjat orang-orang yang beriman di antara kamu dan orang-orang yang diberi ilmu pengetahuan dengan beberapa darjat.”</p>
+        <p>Oleh itu, syabas dan tahniah yang tidak terhingga saya ucapkan kepada seluruh anak-anak yang terus melakar kejayaan SMIIPSU &amp; EHSAN! Sama ada anda telah merangkul kejayaan atau masih berjuang mendaki puncak kecemerlangan, teruskanlah melangkah dengan penuh keyakinan.</p>
+        <p>Jadikan setiap usaha, penat lelah dan kesungguhan anda sebagai ibadah yang kelak membuahkan hasil manis di dunia dan akhirat. Ingatlah firman Allah S.W.T. dalam Surah An-Najm, ayat 39:</p>
+        <p class="ayat" lang="ar">وَأَن لَّيْسَ لِلْإِنسَانِ إِلَّا مَا سَعَىٰ</p>
+        <p class="maksud">Maksudnya: “Dan bahawa sesungguhnya tidak ada bagi seseorang insan itu (balasan) kecuali (apa) yang telah diusahakannya.”</p>
+        <p>Teruskan istiqamah, gantungkan cita-cita anda setinggi-tingginya dan jadilah insan berwawasan besar yang memberi manfaat luas kepada agama, bangsa dan tanah air!</p>
+        <p>Tidak dilupakan juga, barisan ibu bapa dan penjaga yang sentiasa menjadi tulang belakang yang kukuh. Pengorbanan, sokongan moral dan sumbangan tuan-puan, sama ada secara langsung atau di sebalik tabir, adalah nadi penggerak yang menghidupkan setiap aspirasi sekolah ini. Terima kasih yang tidak terhingga atas keprihatinan dan budi baik tuan-puan dalam membina masa depan generasi cemerlang kita bersama.</p>
+        <p>Akhir sekali, penghargaan setinggi-tingginya ditujukan kepada seluruh barisan guru dan warga kerja SMIIPSU &amp; EHSAN. Segala komitmen, keringat, kesabaran dan keikhlasan yang dicurahkan siang dan malam demi mendidik anak-anak ini adalah pelaburan akhirat yang tiada tandingannya. Semoga setiap ilmu yang disalurkan menjadi amal jariah yang pahalanya mengalir tanpa henti. Hanya Allah S.W.T. yang layak membalas jasa bakti mulia anda sekalian.</p>
+        <p>Sekian, wabillahit taufiq wal hidayah.<br>Wassalamualaikum w.b.t.</p>
+      </div>
+      <aside class="portrait">
+        <div class="archframe pop"><img src="img/rahayu.jpg" alt="Puan Hajah Rahayu binti Norbir"></div>
+        <div class="sign"><b>Puan Hajah Rahayu binti Norbir</b><span>Ahli Lembaga Pengarah<br>SMIIPSU &amp; EHSAN</span></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ATUR CARA ================= -->
+<section class="opener" id="aturcara" data-chapter>
+  <canvas class="silk" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <img class="orn o-top" src="img/ornament.png" alt="">
+    <h2 class="o-title">Atur Cara</h2>
+    <div class="sub">Jumaat · 4 Disember 2026</div>
+    <img class="orn flip o-bot" src="img/ornament.png" alt="">
+  </div>
+</section>
+<section class="page tint">
+  <div class="wrap">
+    <ol class="timeline" id="timeline">
+      <li class="line" aria-hidden="true"></li>
+      <li class="slot"><time>7.30 Pagi</time><div><h4>Ketibaan Jemputan &amp; Pendaftaran</h4></div></li>
+      <li class="slot"><time>8.00 Pagi</time><div><h4>Majlis Bermula</h4><ul>
+        <li>Ketibaan Tetamu Kehormat (Iringan Selawat)</li>
+        <li>Nyanyian Lagu Kebangsaan &amp; Asmaul Husna</li>
+        <li>Kata Alu-aluan Pengacara &amp; Bacaan Doa</li>
+        <li>Ucapan Pengetua SMIIPSU (Puan Siti Khaulah binti Sokhibul Fadil)</li>
+        <li>Ucapan Guru Besar EHSAN (Encik Muhammad Iqbal Hakim bin Saiful Affandee)</li>
+        <li>Ucapan Pengerusi SMIIPSU &amp; EHSAN (Puan Rahayu binti Norbir)</li>
+        <li>Ucapan dan Perasmian YDP</li>
+        <li>Penyampaian Cenderamata Penghargaan</li>
+        <li>Tayangan Multimedia Aktiviti SMIIPSU &amp; EHSAN</li></ul></div></li>
+      <li class="slot"><time>8.45 Pagi</time><div><h4>Penyampaian Anugerah Sesi 1</h4><ul>
+        <li>Anugerah Graduasi Pelajar Prasekolah</li>
+        <li>Anugerah Kedudukan dalam Kelas Prasekolah</li>
+        <li>Anugerah Graduasi Pelajar Tahun 6 (EHSAN)</li>
+        <li>Anugerah Kedudukan dalam Kelas Pelajar Tahun 6 (EHSAN)</li>
+        <li>Anugerah Mata Pelajaran Terbaik Pelajar Tahun 6 (EHSAN)</li>
+        <li>Anugerah Kecemerlangan SPM GASIS (SMIIPSU)</li>
+        <li>Anugerah Graduasi Pelajar Tingkatan 5 (SMIIPSU)</li>
+        <li>Anugerah Kedudukan dalam Kelas Pelajar Tingkatan 5 (SMIIPSU)</li></ul></div></li>
+      <li class="slot"><time>9.10 Pagi</time><div><h4>Tayangan Multimedia Aktiviti SMIIPSU &amp; EHSAN</h4><h4>Cabutan Rezeki Pertama</h4><h4>Penyampaian Anugerah Sesi 2</h4><ul>
+        <li>Anugerah Kedudukan dalam Kelas EHSAN</li>
+        <li>Anugerah Mata Pelajaran Terbaik Pelajar EHSAN</li>
+        <li>Anugerah Kedudukan dalam Kelas SMIIPSU</li>
+        <li>Anugerah Mata Pelajaran Terbaik Pelajar SMIIPSU</li></ul></div></li>
+      <li class="slot"><time>9.25 Pagi</time><div><h4>Persembahan Pelajar</h4><ul>
+        <li>Persembahan Pelajar EHSAN</li><li>Persembahan Prasekolah EHSAN</li></ul>
+        <h4>Penyampaian Anugerah Sesi 3</h4><ul>
+        <li>Anugerah Terbaik Murid Prasekolah</li>
+        <li>Anugerah Sahsiah Murid (QR) EHSAN</li>
+        <li>Anugerah Sahsiah Murid (QR) SMIIPSU</li>
+        <li>Anugerah Huffaz Milenia SMIIPSU</li></ul></div></li>
+      <li class="slot"><time>11.15 Pagi</time><div><h4>Anugerah Khas EHSAN</h4><ul>
+        <li>Anugerah Tokoh Hijrah</li><li>Anugerah Tokoh Kokurikulum</li><li>Anugerah Tokoh Pelajar Mithali</li></ul>
+        <h4>Anugerah Khas SMIIPSU</h4><ul>
+        <li>Anugerah Piala Pusingan Kelas Terbaik</li><li>Anugerah Tokoh Kokurikulum</li><li>Anugerah Tokoh Pelajar Mithali</li><li>Anugerah The Walking Quran</li></ul>
+        <h4>Persembahan SMIIPSU</h4></div></li>
+      <li class="slot"><time>11.50 Pagi</time><div><h4>Sesi Bergambar</h4></div></li>
+      <li class="slot"><time>12.00 T/Hari</time><div><h4>Majlis Bersurai</h4></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= OBJEKTIF ================= -->
+<section class="opener" id="objektif" data-chapter>
+  <canvas class="silk" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <img class="orn o-top" src="img/ornament.png" alt="">
+    <h2 class="o-title">Objektif</h2>
+    <img class="orn flip o-bot" src="img/ornament.png" alt="">
+  </div>
+</section>
+<section class="page">
+  <div class="wrap">
+    <ul class="obj stagger">
+      <li>Meraikan murid-murid Tahun 6 dan Tingkatan 5 yang akan meninggalkan alam persekolahan.</li>
+      <li>Meraikan murid-murid EHSAN &amp; SMIIPSU atas kejayaan mereka dalam mengharungi cabaran persekolahan pada sesi 2026.</li>
+      <li>Memberi galakan kepada ibu bapa agar terus memberi sokongan kepada anak-anak untuk mencapai kejayaan.</li>
+      <li>Menggalakkan penglibatan guru-guru, ibu bapa dan murid-murid untuk meningkatkan kecemerlangan pelajar.</li>
+      <li>Mengeratkan hubungan dan memupuk kerjasama dalam kalangan warga sekolah.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= JAWATANKUASA ================= -->
+<section class="opener" id="jawatankuasa" data-chapter>
+  <canvas class="silk" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <img class="orn o-top" src="img/ornament.png" alt="">
+    <h2 class="o-title">Senarai<br>Jawatankuasa</h2>
+    <img class="orn flip o-bot" src="img/ornament.png" alt="">
+  </div>
+</section>
+<section class="page tint">
+  <div class="wrap" style="text-align:center">
+    <div class="ribbon rib">Jawatankuasa Induk</div>
+    <div class="induk stagger">
+      <div class="role">Penasihat</div>
+      <div class="who">Puan Rahayu binti Norbir<small>Ahli Lembaga Pengarah SMIIPSU</small></div>
+      <div class="who">Encik Muhammad Iqbal Hakim bin Saiful Affandee<small>Guru Besar EHSAN</small></div>
+      <div class="who">Encik Muhammad Rozaidi bin Omar<small>Pengetua SMIIPSU</small></div>
+      <div class="role">Pengarah Program</div>
+      <div class="who">Puan Ros Haneyati binti Mohd Hanepah</div>
+      <div class="role">Timbalan Pengarah Program</div>
+      <div class="who">Puan Nur Effa Hazirah binti Ahmad Rusdan</div>
+      <div class="role">Setiausaha</div>
+      <div class="who">Cik Nursyafizah binti Mohd Rohiman</div>
+    </div>
+    <div class="ribbon rib">Jawatankuasa Pelaksana</div>
+    <div class="units stagger">
+      <div class="unit"><h5>Buku Program / Slaid</h5><p>Puan Nasuha binti Ramli<br>Puan Nur Izzah<br>Puan Zanariah binti Awang<br>Cik Nur Adilah binti Abu Bakar</p></div>
+      <div class="unit"><h5>Hiasan Dewan</h5><p>Encik Airyl Idham bin Rahmat<br>Puan Nur Izzah<br>Encik Ammar Rafique bin Azaruddin<br>Encik Zarul Musthaqim bin Mohd Zain<br>Cik Nur Alya Batrisya binti Mohd Norhafifi<br>Encik Nuqman Imran bin Mat Nasir<br>Puan Hamizah binti Razali</p></div>
+      <div class="unit"><h5>Jemputan</h5><p>Puan Siti Khaulah binti Sokhibul Fadil<br>Encik Muhammad Iqbal Hakim bin Saiful Affandee</p></div>
+      <div class="unit"><h5>Pengurusan Hadiah</h5><p>Cik Nurul Nadhirah binti Nurulazwani<br>Cik Nur Hidayah binti Mohd Haris<br>Puan Nurul Hamizah binti Razali<br>Puan Wan Ummu Kalthum bt Wan Mohd Azam</p></div>
+      <div class="unit"><h5>Pendaftaran</h5><p>Encik Nuqman Imran bin Mat Nasir<br>Cik Qurratul Izzah binti Mohamad Daud</p></div>
+      <div class="unit"><h5>Persembahan Pelajar</h5><p>Cik Nurul Nadhirah binti Nurulazwani<br>Cik Nur Hidayah binti Mohd Haris<br>Cik Nur Alya Batrisya binti Mohd Norhafifi<br>Encik Zarul Musthaqim bin Mohd Zain</p></div>
+      <div class="unit"><h5>Multimedia / Teknikal</h5><p>Encik Muhamad Rafiq Shauqi bin Mohd Rizal<br>Encik Airyl Idham bin Rahmat<br>Encik Zarul Musthaqim bin Mohd Zain<br>Cik Nur Adilah binti Abu Bakar</p></div>
+      <div class="unit"><h5>Floor Manager</h5><p>Cik Nurul Nadhirah binti Nurulazwani<br>Cik Nur Dalilahusna binti Md Sofri<br>Puan Zanariah binti Awang<br>Cik Nursyafizah binti Mohd Rohiman<br>Puan Wan Ummu Kalthum bt Wan Mohd Azam</p></div>
+      <div class="unit"><h5>Pengerusi Majlis (Juruacara)</h5><p>Puan Wan Nur Syuhada Adila<br>Encik Ammar Rafique bin Azaruddin</p></div>
+      <div class="unit"><h5>Protokol Majlis</h5><p>Cik Nur Dalilahusna binti Md Sofri<br>Cik Nurul Nadhirah binti Nurulazwani<br>Puan Zanariah binti Awang</p></div>
+      <div class="unit"><h5>Pengurus Peserta &amp; Penyelaras Penerima Sijil</h5><p>Cik Qurratul Izzah binti Mohamad Daud<br>Cik Nur Hidayah binti Mohd Haris<br>Puan Ros Haneyati binti Mohd Hanepah</p></div>
+      <div class="unit"><h5>Bacaan Doa</h5><p>Encik Muhamad Rafiq Shauqi bin Mohd Rizal</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PENERIMA EHSAN ================= -->
+<section class="opener" id="penerima" data-chapter>
+  <canvas class="silk" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <img class="orn o-top" src="img/ornament.png" alt="">
+    <h2 class="o-title">Penerima Anugerah<small>EHSAN</small></h2>
+    <img class="orn flip o-bot" src="img/ornament.png" alt="">
+  </div>
+</section>
+<section class="page">
+  <div class="wrap">
+    <div class="finder pop" id="semak">
+      <h3>Semak Nama Anak</h3>
+      <p>Taip sekurang-kurangnya 3 huruf nama anak untuk melihat anugerah yang diterima.</p>
+      <label for="q" class="sr" style="position:absolute;left:-9999px">Nama murid</label>
+      <input id="q" type="search" placeholder="Contoh: Aisyah Ayra" autocomplete="off" enterkeyhint="search">
+      <div class="results" id="results"></div>
+    </div>
+
+    <div style="text-align:center"><div class="ribbon rib">Senarai Penerima</div></div>
+    <div class="levels" role="tablist" aria-label="Pilih tahap" id="levels"></div>
+    <div id="levelView" role="tabpanel" aria-live="polite"></div>
+
+    <h3 class="sect">Anugerah Sahsiah Murid (QR)</h3><span class="rule"></span>
+    <div class="cards stagger" id="sahsiah"></div>
+
+    <h3 class="sect" style="margin-top:44px">Anugerah Khas</h3><span class="rule"></span>
+    <p class="lead">Penerima anugerah khas akan diumumkan pada hari majlis. Nantikan kejutannya!</p>
+    <div class="sealed stagger">
+      <div class="env"><div><div class="seal">E</div><b>Anugerah Tokoh Hijrah</b><small>Diumumkan pada hari majlis</small></div></div>
+      <div class="env"><div><div class="seal">E</div><b>Anugerah Tokoh Kokurikulum</b><small>Diumumkan pada hari majlis</small></div></div>
+      <div class="env"><div><div class="seal">E</div><b>Anugerah Tokoh Pelajar Mithali</b><small>Diumumkan pada hari majlis</small></div></div>
+      <div class="env"><div><div class="seal">E</div><b>Piala Pusingan Kelas Terbaik</b><small>Diumumkan pada hari majlis</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PENERIMA SMIIPSU ================= -->
+<section class="opener" id="smiipsu" data-chapter>
+  <canvas class="silk" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <img class="orn o-top" src="img/ornament.png" alt="">
+    <h2 class="o-title">Penerima Anugerah<small>SMIIPSU</small></h2>
+    <img class="orn flip o-bot" src="img/ornament.png" alt="">
+  </div>
+</section>
+<section class="page tint">
+  <div class="wrap">
+    <p class="lead" style="margin-bottom:0">Senarai penerima anugerah SMIIPSU akan dikemas kini tidak lama lagi.</p>
+  </div>
+</section>
+</main>
+
+<!-- ================= PENUTUP ================= -->
+<footer class="closing">
+  <canvas id="petals" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <img class="orn" src="img/ornament.png" alt="">
+    <h2 class="c-in">Tahniah</h2>
+    <p class="c-in">Kepada seluruh penerima anugerah dan graduan SMIIPSU &amp; EHSAN 2026. Semoga kejayaan ini menjadi permulaan kepada kecemerlangan yang lebih besar.</p>
+    <div class="legacy c-in">Legacy of the Walking Quran · Legacy of the Excellencies</div>
+    <div class="foot">Majlis Anugerah Kecemerlangan dan Graduasi SMIIPSU | EHSAN 2026<br>Dewan Kuliah 500, UiTM Puncak Alam</div>
+  </div>
+</footer>
+
+<div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-label="Kad Anugerah">
+  <div class="box">
+    <img id="cardImg" alt="Kad Anugerah">
+    <p>Tekan lama pada kad untuk simpan ke galeri, kemudian kongsi di media sosial.</p>
+    <div class="row"><button class="ghost" id="closeModal" type="button">Tutup</button></div>
+  </div>
+</div>
+
+<script src="js/gsap.min.js"></script>
+<script src="js/ScrollTrigger.min.js"></script>
+<script>
+(function(){
+"use strict";
+var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ================= DATA ================= */
+var LEVELS=[{k:'pra',t:'Prasekolah'},{k:'1',t:'Tahun 1'},{k:'2',t:'Tahun 2'},{k:'3',t:'Tahun 3'},{k:'4',t:'Tahun 4'},{k:'5',t:'Tahun 5'},{k:'6',t:'Tahun 6'}];
+var KEDUDUKAN={
+ pra:['KAYSHA EILIYA BINTI MOHAMAD SYAKIR','SYED UMAR ARSYAD BIN SYED AHMAD ASYRAF','MUHAMMAD AHNAF NUFAIL BIN AMIRUL AKMAL'],
+ '1':['HUD ANAQI BIN MUHAMAD LUKMAN','IMAN RUMAYSA BINTI ABDUL HALIM','ZAYN NAYL MUHAMAD FAIZ'],
+ '2':['NUR HANNA HUMAIRA BINTI IZLAN DHIYAUDDIN','AMIRUL FAQIH BIN KAMARUL AKRAM','DAYANG HAURA AFYA BINTI ABANG AFIQ AHLAMI'],
+ '3':['ZARA MARISSA BINTI YAZIDUL HAFIZ','MUHAMMAD AMEER BIN MOHD FAEEZ','BATRISYA AQEELA BT MOHD IKMAL'],
+ '4':['AISYAH AYRA ADZMAN','MUHAMMAD RIZQI HANI BIN ROZAINI','NUR ADRA NADHIRA BINTI AMIRUL AKMAL'],
+ '5':['AQIL AFFAN BIN MOHAMMAD SHAFFIQ','AULIA MAESARAH BINTI NOR HAFIZ','BAROKATUL APRILIA'],
+ '6':['NUR FATHIA AMANDA BINTI MOHD FADHIL','NUR ZAHRA DELISYA BINTI NOR AZLI','MARIYYA SUMAYYAH BINTI MOHD NAUFAL']
+};
+var SUBJEK=[
+ ['Bahasa Melayu',{1:"IZZ NAYLA BINTI NUR' MOHD FARHAN",2:'NUR ARIANA MIKAYLA BINTI MOHD HADIB',3:'MUHAMMAD AMEER BIN MOHD FAEEZ',4:'NUR ADRA NADHIRA BINTI AMIRUL AKMAL',5:'BAROKATUL APRILIA',6:'NUR FATHIA AMANDA BINTI MOHD FADHIL'}],
+ ['Bahasa Inggeris',{1:'MUHAMMAD FALEEQ BIN MOHD FAHMI',2:'SAFIYYAH BINTI MUHAMMAD AFIF',3:'BATRISYA AQEELA BT MOHD IKMAL',4:'NUR ADRA NADHIRA BINTI AMIRUL AKMAL',5:'MUHAMMAD AYDEN NUFAEL B MOHD HASROL HANIF',6:'MARIYYA SUMAYYAH BINTI MOHD NAUFAL'}],
+ ['Matematik',{1:'UMAR KHALED BIN YAZIDUL HAFIZ',2:'NUR HANNA HUMAIRA BINTI IZLAN DHIYAUDDIN',3:'MUHAMMAD QAAYED AMZAR BIN MOHD RIDHUAN',4:'AISYAH AYRA ADZMAN',5:'AQIL AFFAN BIN MOHAMMAD SHAFFIQ',6:'WAN ADAM HAZIM BIN MUHAMAD ARIS'}],
+ ['Sains',{1:'IMAN RUMAYSA BINTI ABDUL HALIM',2:'DAYANG HAURA AFYA BINTI ABANG AFIQ AHLAMI',3:'SYED ADAM BIN SYED MD FITHRE',4:'MUHAMMAD HARRAZ RAYYAN BIN MOHAMMAD UZAIR',5:'MUHAMMAD AMMAR BIN MOHD FAEEZ',6:'IMAN WAFIY UWAIS BIN MUHAMMAD REDZUWAN'}],
+ ['Sejarah',{4:'AISYAH AYRA ADZMAN',5:'AULIA MAESARAH BINTI NOR HAFIZ',6:'NUR FATHIA AMANDA BINTI MOHD FADHIL'}],
+ ['Reka Bentuk & Teknologi',{4:'HUMAIRA IMANI BINTI MUHAMMAD HILMI',5:'ISZZ FATHIYATUL HUSNA BINTI ISKANDAR',6:'NUR ZAHRA DELISYA BINTI NOR AZLI'}],
+ ['Bahasa Arab',{1:'ZAYN NAYL MUHAMAD FAIZ',2:'NUR AINUL MARDHIAH BINTI MOHAMAD ZAIDIL AMIR',3:'MUHAMMAD YUSUF KHAIRIL BIN MOHD GHOUSE AZWAN',4:'MUHAMMAD RIZQI HANI BIN ROZAINI',5:'AULIA MAESARAH BINTI NOR HAFIZ',6:'MARIYYA SUMAYYAH BINTI MOHD NAUFAL'}],
+ ['Jawi',{1:'MUHAMMAD AUFA SHAKIL BIN MOHD AFDHAL',2:'MUHAMMAD ADAM FIRDAUS BIN MOHD ZUL-FAKAR'}],
+ ["Jawi, Khat & Imla'",{3:'MUHAMMAD MIRZA UKAIL BIN AZLY NOR ALIFF',4:'KAYSHA ELVINA BINTI MOHAMAD SYAKIR',5:'AHMAD KHALEEF BIN FAIZUL ANUAR',6:'DHANI RAYQAL BIN SHUKRI'}],
+ ['Tauhid',{1:'HUD ANAQI BIN MUHAMAD LUKMAN',2:'KHAIR EMIR BIN MOHAMAD SYAKIR'}],
+ ['Feqah',{1:'IMAN RUMAYSA BINTI ABDUL HALIM',2:'MUHAMMAD ALI ANAQI BIN MUHAMMAD AMINUDDIN'}],
+ ['Tauhid / Feqah',{3:"IZZ ZARA BINTI NUR' MOHD FARHAN",4:'AISYAH AYRA ADZMAN',6:'NUR ZAHRA DELISYA BINTI NOR AZLI'}],
+ ['Akidah',{5:'ISZZ FATHIYATUL HUSNA BINTI ISKANDAR'}],
+ ['Ibadah',{5:'MUHAMMAD AMMAR BIN MOHD FAEEZ'}],
+ ['Akhlak',{1:'MUHAMMAD AQIL BIN MUHAMMAD IQBAL',2:'AMIRUL FAQIH BIN KAMARUL AKRAM'}],
+ ['Akhlak / Sirah',{3:'IMAN IRSHAD BIN ABDUL HALIM',4:'AISYAH AYRA ADZMAN',6:'AMMAR MALIK BIN ADZMAN'}],
+ ['Adab',{5:'HUD HARRAZ BIN HASBULLAH'}],
+ ['Tajwid',{3:'DAHLIA AZZAHRA BINTI SALMAN',4:'MUHAMMAD RIZQI HANI BIN ROZAINI',5:'AQIL AFFAN BIN MOHAMMAD SHAFFIQ',6:'NUR FATHIA AMANDA BINTI MOHD FADHIL'}],
+ ['Hafazan',{1:'AAIRA ALISHA BINTI AIZAD AL-BAKRI',2:'MUHAMMAD FARIS HERMANTO',3:'ZARA MARISSA BINTI YAZIDUL HAFIZ',4:'MUHAMAD HAZIM BIN IRWAN',6:'MUHAMMAD KHALISH BIN MOHD KHAIRI'}]
+];
+var GRADUASI=['AYRA MARDHIAH BINTI MOHAMMAD SAIFUL ADLI','KAYSHA EILIYA BINTI MOHAMAD SYAKIR','MUHAMMAD AHNAF NUFAIL BIN AMIRUL AKMAL','SYED UMAR ARSYAD BIN SYED AHMAD ASYRAF'];
+var TERBAIK_PRA=[
+ ['Anugerah Potensi Kecemerlangan','KAYSHA EILIYA BINTI MOHAMAD SYAKIR','kaysha'],
+ ['Anugerah Berketerampilan','MUHAMMAD AHNAF NUFAIL BIN AMIRUL AKMAL','ahnaf'],
+ ['Anugerah Kreatif','SYED UMAR ARSYAD BIN SYED AHMAD ASYRAF','syedumar'],
+ ['Anugerah Prihatin','AYRA MARDHIAH BINTI MOHAMMAD SAIFUL ADLI','ayra'],
+ ['Anugerah Berpotensi','MIA SYAFA HALISYA BINTI MUHAMAD SHAZRIN','mia']
+];
+var SAHSIAH=[
+ ['SYED UMAR ARSYAD BIN SYED AHMAD ASYRAF','syedumar2'],
+ ['IZZ NAYLA BINTI NUR MOHD FARHAN','izznayla'],
+ ['NURUL AATRA MEDINA MAULAD AZEMAN','nurulaatra'],
+ ['IZZ ZARA BINTI NUR MOHD FARHAN','izzzara'],
+ ['AISYAH AYRA BINTI ADZMAN','aisyah'],
+ ['MOHD LUQMANUL HAKIM BIN MOHD ZULAZMI',null],
+ ['NUR ZAHRA DELISYA BINTI NOR AZLI','nurzahra']
+];
+var POS=['Pertama','Kedua','Ketiga'];
+var lvlName=function(k){return k==='pra'?'Prasekolah':'Tahun '+k};
+
+/* Senarai rata semua anugerah untuk carian */
+var ALL=[];
+Object.keys(KEDUDUKAN).forEach(function(k){KEDUDUKAN[k].forEach(function(n,i){ALL.push({n:n,a:'Anugerah Kedudukan dalam Kelas',d:'Tempat '+POS[i]+' · '+lvlName(k)})})});
+SUBJEK.forEach(function(s){Object.keys(s[1]).forEach(function(t){ALL.push({n:s[1][t],a:'Anugerah Mata Pelajaran Terbaik',d:s[0]+' · Tahun '+t})})});
+GRADUASI.forEach(function(n){ALL.push({n:n,a:'Anugerah Graduasi Murid Prasekolah',d:'Prasekolah EHSAN'})});
+TERBAIK_PRA.forEach(function(x){ALL.push({n:x[1],a:x[0],d:'Anugerah Terbaik Prasekolah'})});
+SAHSIAH.forEach(function(x){ALL.push({n:x[0],a:'Anugerah Sahsiah Murid (QR)',d:'EHSAN'})});
+
+var STOP={BIN:1,BINTI:1,BT:1,B:1};
+function toks(s){return s.toUpperCase().replace(/[^A-Z0-9 ]/g,'').split(/\s+/).filter(function(w){return w&&!STOP[w]})}
+function key(s){return toks(s).join(' ')}
+function esc(s){return s.replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+
+/* ================= CARIAN ================= */
+var q=document.getElementById('q'),res=document.getElementById('results'),lastHits=[];
+function search(){
+  var v=q.value.trim(); var qt=toks(v);
+  if(v.replace(/\s/g,'').length<3||!qt.length){res.innerHTML='';return}
+  var groups={},order=[];
+  ALL.forEach(function(r){
+    var nt=toks(r.n); var j=nt.join(' ');
+    var ok=qt.every(function(t){return nt.some(function(w){return w.indexOf(t)===0})||j.indexOf(t)>=0});
+    if(!ok)return;
+    var k=key(r.n);
+    if(!groups[k]){groups[k]={n:r.n,list:[]};order.push(k)}
+    if(r.n.length>groups[k].n.length)groups[k].n=r.n;
+    groups[k].list.push(r);
+  });
+  lastHits=order.map(function(k){return groups[k]});
+  if(!order.length){res.innerHTML='<p class="empty">Tiada padanan dalam senarai penerima EHSAN. Semak ejaan, atau nama mungkin dalam senarai SMIIPSU atau anugerah khas yang akan diumumkan pada hari majlis.</p>';return}
+  res.innerHTML=lastHits.slice(0,12).map(function(g,gi){
+    return '<div class="res"><div class="nm">'+esc(g.n)+'</div><ul>'+g.list.map(function(r,ri){
+      return '<li><div><b>'+esc(r.a)+'</b><span>'+esc(r.d)+'</span></div><button class="btn" type="button" data-g="'+gi+'" data-r="'+ri+'">Kad Anugerah</button></li>'
+    }).join('')+'</ul></div>'
+  }).join('');
+  if(window.gsap&&!reduce)gsap.from(res.children,{y:14,opacity:0,duration:.45,stagger:.06,ease:'power2.out'});
+}
+var tmr;q.addEventListener('input',function(){clearTimeout(tmr);tmr=setTimeout(search,160)});
+res.addEventListener('click',function(e){var b=e.target.closest('button[data-g]');if(!b)return;var g=lastHits[+b.dataset.g];makeCard(g.n,g.list[+b.dataset.r])});
+
+/* ================= PAPARAN TAHAP ================= */
+var lv=document.getElementById('levels'),view=document.getElementById('levelView');
+lv.innerHTML=LEVELS.map(function(L,i){return '<button role="tab" type="button" id="tab-'+L.k+'" aria-selected="'+(i===0)+'" data-k="'+L.k+'">'+L.t+'</button>'}).join('');
+function podium(k){
+  return '<h3 class="sect">Anugerah Kedudukan dalam Kelas</h3><span class="rule"></span><div class="podium">'+KEDUDUKAN[k].map(function(n,i){
+    return '<div class="pod p'+(i+1)+'"><div class="medal">'+(i+1)+'</div><div class="rk">Tempat '+POS[i]+'</div><div class="nm">'+esc(n)+'</div></div>'}).join('')+'</div>';
+}
+function renderLevel(k){
+  var h='';
+  if(k==='pra'){
+    h+='<h3 class="sect">Anugerah Graduasi Murid Prasekolah</h3><span class="rule"></span><ul class="gradlist">'+GRADUASI.map(function(n){return '<li>'+esc(n)+'</li>'}).join('')+'</ul>';
+    h+=podium(k);
+    h+='<h3 class="sect">Anugerah Terbaik Prasekolah</h3><span class="rule"></span><div class="cards">'+TERBAIK_PRA.map(function(x){
+      return '<div class="pc"><div class="archframe"><img src="img/p-'+x[2]+'.jpg" alt="'+esc(x[1])+'" loading="lazy"></div><div class="tag">'+esc(x[0].replace('Anugerah ',''))+'</div><div class="nm">'+esc(x[1])+'</div></div>'}).join('')+'</div>';
+  }else{
+    h+=podium(k);
+    var rows=SUBJEK.filter(function(s){return s[1][k]});
+    h+='<h3 class="sect">Anugerah Mata Pelajaran Terbaik</h3><span class="rule"></span><div class="subjects">'+rows.map(function(s){
+      return '<div class="subj"><div class="sj">'+esc(s[0])+'</div><div class="nm">'+esc(s[1][k])+'</div></div>'}).join('')+'</div>';
+  }
+  view.innerHTML=h;
+  view.setAttribute('aria-labelledby','tab-'+k);
+  if(window.gsap&&!reduce){
+    gsap.from(view.querySelectorAll('.pod,.subj,.pc,.gradlist li'),{y:22,opacity:0,duration:.5,stagger:.035,ease:'power2.out'});
+    gsap.from(view.querySelectorAll('.medal'),{scale:0,rotation:-90,duration:.6,stagger:.1,ease:'back.out(2)',delay:.1});
+  }
+}
+lv.addEventListener('click',function(e){
+  var b=e.target.closest('button[data-k]');if(!b)return;
+  lv.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-selected',x===b)});
+  renderLevel(b.dataset.k);
+});
+renderLevel('pra');
+document.getElementById('sahsiah').innerHTML=SAHSIAH.map(function(x){
+  var pic=x[1]?'<img src="img/p-'+x[1]+'.jpg" alt="'+esc(x[0])+'" loading="lazy">':'<div class="mono" aria-hidden="true">'+x[0].split(' ')[1].charAt(0)+'</div>';
+  return '<div class="pc"><div class="archframe">'+pic+'</div><div class="nm">'+esc(x[0])+'</div></div>'}).join('');
+
+/* ================= KIRAAN DETIK ================= */
+var target=new Date('2026-12-04T08:00:00+08:00').getTime();
+function pad(n){return (n<10?'0':'')+n}
+function tick(){
+  var d=target-Date.now();
+  if(d<=0){document.getElementById('countdown').hidden=true;document.getElementById('cdLabel').textContent='Alhamdulillah, majlis telah berlangsung';return}
+  var s=Math.floor(d/1000);
+  document.getElementById('cdD').textContent=Math.floor(s/86400);
+  document.getElementById('cdH').textContent=pad(Math.floor(s%86400/3600));
+  document.getElementById('cdM').textContent=pad(Math.floor(s%3600/60));
+  document.getElementById('cdS').textContent=pad(s%60);
+}
+tick();setInterval(tick,1000);
+
+/* ================= NAV AKTIF ================= */
+var links=[].slice.call(document.querySelectorAll('.toc a'));
+var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){var i=secs.indexOf(en.target);links.forEach(function(a,j){a.classList.toggle('on',i===j)});var a=links[i];if(a&&a.scrollIntoView&&a.parentNode.parentNode.scrollTo){var ul=a.parentNode.parentNode;ul.scrollTo({left:a.offsetLeft-24,behavior:'smooth'})}}})},{rootMargin:'-45% 0px -50% 0px'});
+  secs.forEach(function(s){if(s)io.observe(s)});
+}
+
+/* ================= KILAUAN EMAS (hero) ================= */
+function sparkles(cv,count,mode){
+  var ctx=cv.getContext('2d'),W,H,P=[],run=true,dpr=Math.min(2,window.devicePixelRatio||1);
+  function size(){W=cv.clientWidth;H=cv.clientHeight;cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0)}
+  size();addEventListener('resize',size);
+  for(var i=0;i<count;i++)P.push(spawn(true));
+  function spawn(init){return{x:Math.random()*W,y:init?Math.random()*H:(mode==='petal'?-20:H+10),r:mode==='petal'?4+Math.random()*5:.6+Math.random()*1.8,v:mode==='petal'?.4+Math.random()*.8:.15+Math.random()*.45,ph:Math.random()*6.28,rot:Math.random()*6.28,c:Math.random()}}
+  if('IntersectionObserver' in window)new IntersectionObserver(function(e){run=e[0].isIntersecting;if(run)loop()}).observe(cv);
+  function draw(p,t){
+    if(mode==='petal'){
+      ctx.save();ctx.translate(p.x+Math.sin(t/900+p.ph)*20,p.y);ctx.rotate(p.rot+t/1400);
+      ctx.fillStyle=p.c<.55?'rgba(236,213,159,.85)':(p.c<.8?'rgba(196,150,62,.8)':'rgba(255,244,222,.75)');
+      ctx.beginPath();ctx.ellipse(0,0,p.r,p.r*.55,0,0,6.283);ctx.fill();ctx.restore();
+    }else{
+      var a=.35+.65*Math.abs(Math.sin(t/700+p.ph));
+      ctx.fillStyle='rgba(255,226,150,'+a.toFixed(2)+')';ctx.shadowColor='rgba(255,210,120,.9)';ctx.shadowBlur=6;
+      ctx.beginPath();ctx.arc(p.x+Math.sin(t/1500+p.ph)*6,p.y,p.r,0,6.283);ctx.fill();
+    }
+  }
+  var raf=0;
+  function loop(){cancelAnimationFrame(raf);raf=requestAnimationFrame(frame)}
+  function frame(t){
+    if(!run)return;
+    ctx.clearRect(0,0,W,H);
+    P.forEach(function(p,i){p.y+=mode==='petal'?p.v:-p.v;if(p.y<-20||p.y>H+30)P[i]=spawn(false);draw(p,t)});
+    raf=requestAnimationFrame(frame);
+  }
+  loop();
+}
+if(!reduce){sparkles(document.getElementById('sparkle'),46,'spark');sparkles(document.getElementById('petals'),34,'petal')}
+
+/* ================= SUTERA (pembuka bab) ================= */
+function silk(cv){
+  var ctx=cv.getContext('2d'),W,H,run=!reduce,dpr=Math.min(2,window.devicePixelRatio||1),seed=Math.random()*10;
+  function size(){W=cv.clientWidth;H=cv.clientHeight;cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0)}
+  function draw(t){
+    ctx.clearRect(0,0,W,H);
+    var n=46,cy=H*.52,amp=H*.2;
+    for(var i=0;i<n;i++){
+      var k=i/n;
+      ctx.beginPath();
+      for(var x=-20;x<=W+20;x+=10){
+        var u=x/W,env=Math.sin(Math.PI*Math.min(1,Math.max(0,u*1.05)));
+        var y=cy+Math.sin(u*5.2+t*.00035+seed+k*1.3)*amp*(.55+.45*env)+Math.sin(u*2.1-t*.00022+k*2.4)*amp*.35+(k-.5)*H*.32*env;
+        x<=-20?ctx.moveTo(x,y):ctx.lineTo(x,y);
+      }
+      var sh=Math.sin(k*Math.PI);
+      ctx.strokeStyle=i%3===0?'rgba(150,108,70,'+(0.05*sh).toFixed(3)+')':'rgba(255,255,255,'+(0.55*sh).toFixed(3)+')';
+      ctx.lineWidth=i%3===0?1.2:2.2;ctx.stroke();
+    }
+  }
+  size();draw(0);addEventListener('resize',function(){size();draw(performance.now())});
+  if(reduce)return;
+  var vis=false,raf=0;
+  function frame(t){if(!vis)return;draw(t);raf=requestAnimationFrame(frame)}
+  if('IntersectionObserver' in window)new IntersectionObserver(function(e){vis=e[0].isIntersecting;cancelAnimationFrame(raf);if(vis)raf=requestAnimationFrame(frame)}).observe(cv);
+}
+[].forEach.call(document.querySelectorAll('canvas.silk'),silk);
+
+/* ================= ANIMASI GSAP ================= */
+if(window.gsap&&!reduce){
+  gsap.registerPlugin(ScrollTrigger);
+  /* tirai terbuka */
+  var tl=gsap.timeline({defaults:{ease:'power3.inOut'}});
+  tl.from('.curtain.l',{xPercent:86,duration:1.8})
+    .from('.curtain.r',{xPercent:-86,duration:1.8},0)
+    .from('.arch',{scale:.92,y:30,duration:1.4,ease:'power2.out'},.5)
+    .from('.h-in',{y:18,opacity:0,duration:.7,stagger:.09,ease:'power2.out'},.9)
+    .from('.countdown div',{y:20,opacity:0,stagger:.08,duration:.5,ease:'back.out(2)'},1.8);
+  /* tirai sedikit bergoyang */
+  gsap.to('.curtain.l',{skewY:.6,duration:3,yoyo:true,repeat:-1,ease:'sine.inOut',delay:2});
+  gsap.to('.curtain.r',{skewY:-.6,duration:3.3,yoyo:true,repeat:-1,ease:'sine.inOut',delay:2});
+  /* parallax kulit */
+  gsap.to('.cover',{y:80,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+
+  function inView(el){var r=el.getBoundingClientRect();return r.top<innerHeight*.92}
+  /* pembuka bab */
+  gsap.utils.toArray('.opener').forEach(function(op){
+    var t=gsap.timeline({scrollTrigger:{trigger:op,start:'top 78%',once:true}});
+    t.from(op.querySelector('.o-top'),{scaleX:0,opacity:0,duration:.8,ease:'power2.out'})
+     .from(op.querySelector('.o-title'),{y:40,opacity:0,filter:'blur(6px)',duration:1,ease:'power3.out'},.15)
+     .from(op.querySelectorAll('.sub'),{opacity:0,y:10,duration:.6},.6)
+     .from(op.querySelector('.o-bot'),{scaleX:0,opacity:0,duration:.8,ease:'power2.out'},.4);
+  });
+  /* perenggan & senarai */
+  gsap.utils.toArray('.reveal-group p').forEach(function(p){
+    if(inView(p))return;
+    gsap.from(p,{y:24,opacity:0,duration:.8,ease:'power2.out',scrollTrigger:{trigger:p,start:'top 90%',once:true}});
+  });
+  gsap.utils.toArray('.stagger').forEach(function(g){
+    gsap.from(g.children,{y:30,opacity:0,duration:.7,stagger:.08,ease:'power2.out',scrollTrigger:{trigger:g,start:'top 85%',once:true}});
+  });
+  gsap.utils.toArray('.pop').forEach(function(el){
+    gsap.from(el,{scale:.9,opacity:0,duration:.9,ease:'back.out(1.6)',scrollTrigger:{trigger:el,start:'top 85%',once:true}});
+  });
+  gsap.utils.toArray('.rib').forEach(function(el){
+    gsap.from(el,{clipPath:'polygon(50% 0,50% 0,50% 50%,50% 100%,50% 100%,50% 50%)',duration:1,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%',once:true}});
+  });
+  /* garis masa atur cara */
+  gsap.fromTo('#timeline .line',{scaleY:0},{scaleY:1,ease:'none',scrollTrigger:{trigger:'#timeline',start:'top 70%',end:'bottom 60%',scrub:.6}});
+  gsap.utils.toArray('.slot').forEach(function(s){
+    gsap.from(s,{x:-30,opacity:0,duration:.7,ease:'power2.out',scrollTrigger:{trigger:s,start:'top 82%',once:true}});
+  });
+  gsap.from('.c-in',{y:30,opacity:0,stagger:.15,duration:.9,ease:'power2.out',scrollTrigger:{trigger:'.closing',start:'top 75%',once:true}});
+}
+
+/* ================= KAD ANUGERAH ================= */
+var imgCache={};
+function loadImg(src){if(imgCache[src])return imgCache[src];imgCache[src]=new Promise(function(ok){var i=new Image();i.onload=function(){ok(i)};i.onerror=function(){ok(null)};i.src=src});return imgCache[src]}
+function wrapLines(ctx,text,maxW){var words=text.split(' '),lines=[],cur='';words.forEach(function(w){var t=cur?cur+' '+w:w;if(ctx.measureText(t).width>maxW&&cur){lines.push(cur);cur=w}else cur=t});if(cur)lines.push(cur);return lines}
+function makeCard(name,r){
+  var fontsReady=document.fonts?Promise.all(['400 100px "Pinyon Script"','700 40px "Cormorant Garamond"','italic 500 40px "Cormorant Garamond"','600 30px "Cinzel"'].map(function(f){return document.fonts.load(f)})).catch(function(){}):Promise.resolve();
+  Promise.all([loadImg('img/batik-tile.jpg'),loadImg('img/logo-smiip.png'),loadImg('img/logo-ehsan.png'),loadImg('img/ornament.png'),fontsReady]).then(function(a){
+    var tile=a[0],l1=a[1],l2=a[2],orn=a[3];
+    var W=1080,H=1350,c=document.createElement('canvas');c.width=W;c.height=H;var x=c.getContext('2d');
+    x.fillStyle='#3f0a11';x.fillRect(0,0,W,H);
+    if(tile){x.globalAlpha=.9;x.fillStyle=x.createPattern(tile,'repeat');x.fillRect(0,0,W,H);x.globalAlpha=1}
+    var g=x.createRadialGradient(W/2,H/2,200,W/2,H/2,900);g.addColorStop(0,'rgba(40,4,10,0)');g.addColorStop(1,'rgba(30,3,8,.7)');x.fillStyle=g;x.fillRect(0,0,W,H);
+    x.strokeStyle='#c4963e';x.lineWidth=4;x.strokeRect(36,36,W-72,H-72);x.lineWidth=1.5;x.strokeRect(52,52,W-104,H-104);
+    /* panel gerbang */
+    var L=130,R=950,T=130,B=1220,cx=540,rad=(R-L)/2,top=T+rad;
+    function arch(inset){x.beginPath();x.moveTo(L+inset,B-inset);x.lineTo(L+inset,top);x.arc(cx,top,rad-inset,Math.PI,0);x.lineTo(R-inset,B-inset);x.closePath()}
+    x.save();x.shadowColor='rgba(0,0,0,.5)';x.shadowBlur=40;arch(0);x.fillStyle='#fffaf1';x.fill();x.restore();
+    x.lineWidth=5;x.strokeStyle='#c4963e';arch(0);x.stroke();
+    x.lineWidth=1.5;arch(16);x.stroke();
+    var lh=120;
+    if(l1)x.drawImage(l1,cx-20-lh*l1.width/l1.height,200,lh*l1.width/l1.height,lh);
+    if(l2)x.drawImage(l2,cx+20,200,lh*l2.width/l2.height,lh);
+    x.fillStyle='#c4963e';x.fillRect(cx-1,210,2,100);
+    x.textAlign='center';x.textBaseline='alphabetic';
+    x.fillStyle='#6e1521';x.font='400 132px "Pinyon Script", cursive';x.fillText('Tahniah',cx,470);
+    x.fillStyle='#7b5a4d';x.font='italic 500 34px "Cormorant Garamond", serif';x.fillText('dengan bangganya diraikan',cx,530);
+    x.fillStyle='#3d1218';var fs=52;x.font='700 '+fs+'px "Cormorant Garamond", serif';
+    var lines=wrapLines(x,name,680);while(lines.length>3&&fs>34){fs-=4;x.font='700 '+fs+'px "Cormorant Garamond", serif';lines=wrapLines(x,name,680)}
+    var y=610;lines.forEach(function(s){x.fillText(s,cx,y);y+=fs*1.12});
+    if(orn){var ow=380,oh=ow*orn.height/orn.width;x.drawImage(orn,cx-ow/2,y+6,ow,oh);y+=oh+70}else y+=60;
+    x.fillStyle='#9a6d1f';x.font='600 30px "Cinzel", serif';
+    wrapLines(x,r.a.toUpperCase(),700).forEach(function(s){x.fillText(s,cx,y);y+=40});
+    x.fillStyle='#6e1521';x.font='italic 500 40px "Cormorant Garamond", serif';
+    wrapLines(x,r.d,700).forEach(function(s){x.fillText(s,cx+0,y+8);y+=46});
+    x.fillStyle='#6e1521';x.font='600 24px "Cinzel", serif';x.fillText('MAJLIS ANUGERAH KECEMERLANGAN',cx,1110);x.fillText('DAN GRADUASI SMIIPSU | EHSAN 2026',cx,1146);
+    x.fillStyle='#7b5a4d';x.font='italic 500 28px "Cormorant Garamond", serif';x.fillText('4 Disember 2026 · Dewan Kuliah 500, UiTM Puncak Alam',cx,1186);
+    x.fillStyle='#ecd59f';x.font='600 22px "Cinzel", serif';x.fillText('LEGACY OF THE EXCELLENCIES',cx,1290);
+    var im=document.getElementById('cardImg');im.src=c.toDataURL('image/png');im.alt='Kad Anugerah untuk '+name;
+    var m=document.getElementById('modal');m.hidden=false;document.getElementById('closeModal').focus();
+    if(window.gsap&&!reduce)gsap.from('.modal .box',{scale:.85,opacity:0,duration:.5,ease:'back.out(1.7)'});
+  });
+}
+function closeM(){document.getElementById('modal').hidden=true}
+document.getElementById('closeModal').addEventListener('click',closeM);
+document.getElementById('modal').addEventListener('click',function(e){if(e.target.id==='modal')closeM()});
+addEventListener('keydown',function(e){if(e.key==='Escape')closeM()});
+})();
+</script>
+
+</body>
+</html>
