@@ -777,14 +777,14 @@ var SAHSIAH=[
  ['NUR ZAHRA DELISYA BINTI NOR AZLI','nurzahra']
 ];
 
-/* Titik fokus crop setiap gambar (pecahan lebar/tinggi fail asal).
+/* Gambar yang disediakan pada saiz global 800 x 1000 px (4:5) TIDAK perlu entri di sini:
+   ia dipaparkan seperti asal (object-fit: cover). Entri di bawah hanya untuk gambar lama
+   dari buku program yang belum diganti.
+   Titik fokus crop setiap gambar (pecahan lebar/tinggi fail asal).
    x,y = penjuru kiri atas kawasan crop; w,h = saiz kawasan crop (nisbah 4:5, bahu ke atas).
    Laraskan nilai di sini jika crop perlu dibetulkan — fail gambar asal tidak diubah. */
-var PHOTO_FOCUS={
- ahnaf:{x:0.1077,y:0.1133,w:0.7909,h:0.6824}, aisyah:{x:.1743,y:0,w:.6582,h:.7048}, ayra:{x:.1561,y:0,w:.6449,h:.7043},
- izznayla:{x:0,y:0,w:1,h:.7823}, izzzara:{x:.1105,y:0,w:.8895,h:.6959}, kaysha:{x:0.1313,y:0.1504,w:0.6925,h:0.654},
- mia:{x:.1339,y:0,w:.7842,h:.8392}, nurulaatra:{x:.1709,y:0,w:.6833,h:.7108}, nurzahra:{x:.2021,y:0,w:.6335,h:.6839},
- syedumar:{x:0.0768,y:0.1327,w:0.9023,h:0.7523}, syedumar2:{x:0.0768,y:0.1327,w:0.9023,h:0.7523}
+var PHOTO_FOCUS={ aisyah:{x:.1743,y:0,w:.6582,h:.7048},
+ izznayla:{x:0,y:0,w:1,h:.7823}, izzzara:{x:.1105,y:0,w:.8895,h:.6959}, nurulaatra:{x:.1709,y:0,w:.6833,h:.7108}, nurzahra:{x:.2021,y:0,w:.6335,h:.6839}
 };
 
 var POS=['Pertama','Kedua','Ketiga'];
