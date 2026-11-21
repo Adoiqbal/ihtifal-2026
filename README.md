@@ -10,11 +10,15 @@ Buku program digital beranimasi untuk **Majlis Anugerah Kecemerlangan dan Gradua
 - Semak Nama Anak dan Kad Anugerah (1080×1350) untuk media sosial
 - Anugerah Khas dirahsiakan sehingga hari majlis (nama penerima tidak disimpan dalam kod)
 
+## Tema rasmi
+“Menyemai Akhlak, Menjulang Ilmu, Menabur Bakti”
+
 ## Struktur
 ```
 index.html   laman (HTML, CSS dan JS dalam satu fail)
 img/         aset batik, logo dan gambar murid
 js/          GSAP 3.12.5 + ScrollTrigger (disimpan setempat, tiada CDN)
+audio/       (pilihan) fail muzik latar dan bunyi anugerah — lihat bahagian Audio
 ```
 
 ## Kemas kini data
@@ -23,3 +27,25 @@ Semua data penerima ada dalam `index.html`, di bahagian `/* ================= DA
 
 ## Hosting
 Laman statik. Aktifkan GitHub Pages: Settings → Pages → Deploy from branch → `main` / root.
+
+## Gambar penerima
+Gambar dipaparkan dalam nisbah 4:5 (bahu ke atas). Kedudukan crop setiap gambar ditetapkan dalam
+`PHOTO_FOCUS` dalam `index.html` (pecahan `x`, `y`, `w`, `h` bagi fail asal). Laraskan nilai di situ
+jika crop perlu dibetulkan; fail gambar asal tidak diubah. Gambar tanpa konfigurasi guna
+`object-fit: cover` sebagai asas.
+
+## Audio
+Audio hanya untuk pengalaman pengunjung laman (bukan untuk dewan). Tiada bunyi dimainkan secara
+automatik; muzik latar bermula hanya selepas pengunjung menekan butang audio.
+
+Secara lalai, muzik latar dan fanfare anugerah dijana secara digital dalam pelayar (Web Audio API),
+jadi tiada fail dan tiada isu hak cipta. Untuk guna fail sendiri:
+
+1. Letakkan fail dalam folder `audio/` (MP3 disokong semua pelayar utama).
+2. Kemas kini `AUDIO_SRC` dalam `index.html`, contohnya `{music:'audio/<fail-muzik>.mp3', award:'audio/<fail-fanfare>.mp3'}`.
+3. Jika fail gagal dimuat, laman kembali kepada bunyi digital secara automatik.
+
+Fail yang diperlukan (jika mahu ganti bunyi digital):
+- Muzik latar instrumental, 1–3 minit, boleh diulang (loop) dengan lancar, ±128 kbps, kurang 3 MB.
+- Fanfare anugerah, 1–2 saat, kurang 100 KB.
+Pastikan fail mempunyai lesen yang membenarkan penggunaan (contohnya ciptaan sendiri atau lesen bebas royalti).
