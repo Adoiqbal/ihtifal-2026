@@ -226,15 +226,35 @@ h3.sect{font-family:var(--f-script);font-weight:400;color:var(--gold-d);font-siz
 /* Panel anugerah: akademik (putih) dan sahsiah/khas (bingkai batik) */
 .aw-panel{border-radius:10px}
 .aw-panel.acad{margin-top:8px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);padding:28px clamp(14px,3vw,30px) 32px}
-.aw-head{text-align:center;margin-bottom:18px}
+.aw-head{text-align:center;margin-bottom:16px}
 .aw-title{font-family:var(--f-script);font-weight:400;font-size:clamp(2rem,7.5vw,2.7rem);color:var(--maroon);margin:0;line-height:1.1;text-wrap:balance}
 .aw-sub{font-family:var(--f-caps);font-size:.72rem;letter-spacing:.14em;color:var(--gold-d);margin-top:6px;line-height:1.6}
 .aw-panel.acad #levelView>h3.sect:first-child{margin-top:8px}
-.aw-panel.batik{margin-top:48px;padding:12px;background:url(img/batik-tile.jpg) 0 0/150px,var(--maroon);box-shadow:0 0 0 1px var(--gold-d),0 14px 34px rgba(61,18,24,.18)}
+.aw-panel.batik{margin-top:28px;padding:12px;background:url(img/batik-tile.jpg) 0 0/150px,var(--maroon);box-shadow:0 0 0 1px var(--gold-d),0 14px 34px rgba(61,18,24,.18)}
 .aw-panel.batik .aw-in{background:var(--ivory-2);border:1px solid var(--gold);border-radius:6px;padding:28px clamp(14px,3vw,30px) 34px;box-shadow:inset 0 0 0 5px var(--ivory-2),inset 0 0 0 6px var(--line)}
 .aw-panel.batik h3.sect{margin-top:10px}
 .aw-div{width:min(200px,50%);margin:34px auto 6px}
 .aw-panel.batik .sealed{grid-template-columns:repeat(2,minmax(0,1fr));max-width:640px;margin-inline:auto}
+/* Tab sekolah & panel buka/tutup */
+.school-tabs{display:flex;justify-content:center;gap:0;margin:0 auto 10px;width:max-content;max-width:100%;border:1px solid var(--gold);border-radius:999px;padding:4px;background:#fff;box-shadow:var(--shadow)}
+.school-tabs button{min-height:44px;min-width:120px;cursor:pointer;border:0;background:transparent;color:var(--maroon);border-radius:999px;font-family:var(--f-caps);font-size:.82rem;letter-spacing:.14em;font-weight:600;padding:8px 20px;transition:background .2s,color .2s}
+.school-tabs button:hover{background:rgba(196,150,62,.12)}
+.school-tabs button[aria-selected="true"]{background:var(--maroon);color:var(--gold-l)}
+.tap-hint{font-size:.95rem;margin-bottom:22px}
+.accs{display:grid;gap:10px}
+.acc{border:1px solid var(--line);border-radius:8px;background:#fff;scroll-margin-top:72px;transition:box-shadow .2s,border-color .2s}
+.acc[open]{border-color:var(--gold);box-shadow:var(--shadow)}
+.acc summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;min-height:56px;padding:10px 16px;border-radius:8px}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary:hover{background:rgba(196,150,62,.08)}
+.acc[open] summary{border-bottom:1px solid var(--line);border-radius:8px 8px 0 0}
+.acc-t{flex:1;min-width:0;font-family:var(--f-display);font-weight:700;font-size:1.12rem;color:var(--maroon);line-height:1.25}
+.acc-n{flex:none;font-family:var(--f-caps);font-size:.72rem;letter-spacing:.08em;color:var(--gold-d);background:var(--ivory-2);border:1px solid var(--line);border-radius:999px;padding:3px 10px;white-space:nowrap}
+.acc-ic{flex:none;width:10px;height:10px;border-right:2px solid var(--gold-d);border-bottom:2px solid var(--gold-d);transform:rotate(45deg) translate(-2px,-2px);transition:transform .25s}
+.acc[open] .acc-ic{transform:rotate(-135deg) translate(-2px,-2px)}
+.acc-b{padding:6px 16px 20px}
+.acc-b h3.sect:first-child{margin-top:12px}
+.aw-panel.batik .acc{background:var(--ivory)}
 /* Anugerah khas (rahsia) */
 .sealed{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,190px),1fr));gap:16px}
 .env{position:relative;aspect-ratio:4/3;border-radius:4px;overflow:hidden;background:url(img/batik-tile.jpg) 0 0/160px,var(--maroon);border:1px solid var(--gold);display:grid;place-items:center;text-align:center;padding:16px;color:var(--ivory);box-shadow:0 10px 24px rgba(61,18,24,.22)}
@@ -320,12 +340,31 @@ h3.sect{font-family:var(--f-script);font-weight:400;color:var(--gold-d);font-siz
   .arch::before{border-radius:190px 190px 8px 8px/142px 142px 8px 8px}
 }
 @media (max-width:480px){
+  .school-tabs button{min-width:0;flex:1;padding:8px 14px}
+  .school-tabs{width:100%}
+  .acc summary{padding:10px 12px;gap:10px;min-height:54px}
+  .acc-t{font-size:1.04rem}
+  .acc-b{padding:4px 10px 16px}
+  .acc-b h3.sect{font-size:1.7rem;margin-top:18px}
+  .rule{margin-bottom:12px}
+  .podium{gap:8px;margin:10px 0 6px}
+  .pod,.pod.p1{display:grid;grid-template-columns:42px minmax(0,1fr);column-gap:12px;align-items:center;text-align:left;padding:10px 12px}
+  .pod .medal,.p1 .medal{grid-row:span 2;margin:0;width:40px;height:40px;font-size:1.1rem}
+  .pod .rk{font-size:.7rem}
+  .pod .nm{margin-top:0;font-size:.95rem}
+  .subjects{gap:8px}
+  .subj{padding:9px 12px}
+  .gradlist button{padding:8px 6px;font-size:.95rem}
+  .aw-panel.batik .sealed{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .env{min-height:112px;padding:10px}
+  .env .seal{width:38px;height:38px;font-size:1.2rem;margin-bottom:6px}
+  .env b{font-size:.7rem}
+  .env small{font-size:.78rem}
   .cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
   .aw-panel.batik{padding:7px}
   .aw-panel.batik .aw-in{padding:22px 12px 26px;box-shadow:inset 0 0 0 4px var(--ivory-2),inset 0 0 0 5px var(--line)}
   .aw-panel.acad{padding:22px 12px 26px}
-  .aw-panel.batik .sealed{grid-template-columns:1fr;gap:12px}
-  .env{aspect-ratio:auto;min-height:132px}
+  .env{aspect-ratio:auto}
 }
 @media (max-width:380px){
   body{font-size:17px}
@@ -400,7 +439,6 @@ h3.sect{font-family:var(--f-script);font-weight:400;color:var(--gold-d);font-siz
     <li><a href="#objektif">Objektif</a></li>
     <li><a href="#jawatankuasa">Jawatankuasa</a></li>
     <li><a href="#penerima">Penerima Anugerah</a></li>
-    <li><a href="#smiipsu">SMIIPSU</a></li>
   </ul></div>
 </nav>
 
@@ -561,12 +599,12 @@ h3.sect{font-family:var(--f-script);font-weight:400;color:var(--gold-d);font-siz
   </div>
 </section>
 
-<!-- ================= PENERIMA EHSAN ================= -->
+<!-- ================= PENERIMA ANUGERAH ================= -->
 <section class="opener" id="penerima">
   <canvas class="silk" aria-hidden="true"></canvas>
   <div class="wrap">
     <img class="orn o-top" src="img/ornament.png" alt="">
-    <h2 class="o-title">Penerima Anugerah<small>EHSAN</small></h2>
+    <h2 class="o-title">Penerima Anugerah<small>EHSAN · SMIIPSU</small></h2>
     <img class="orn flip o-bot" src="img/ornament.png" alt="">
   </div>
 </section>
@@ -581,45 +619,49 @@ h3.sect{font-family:var(--f-script);font-weight:400;color:var(--gold-d);font-siz
       <div class="results" id="results"></div>
     </div>
 
-    <div style="text-align:center"><div class="ribbon rib">Senarai Penerima</div></div>
-    <p class="lead">Tekan nama atau kad penerima untuk melihat paparan penuh.</p>
-    <section class="aw-panel acad" aria-labelledby="acadTtl">
-      <div class="aw-head"><h3 class="aw-title" id="acadTtl">Anugerah Mengikut Tahap</h3><div class="aw-sub">Kedudukan dalam Kelas · Mata Pelajaran Terbaik · Prasekolah</div></div>
-      <div class="levels" role="tablist" aria-label="Pilih tahap" id="levels"></div>
-      <div id="levelView" role="tabpanel"></div>
-    </section>
+    <div class="school-tabs" role="tablist" aria-label="Pilih sekolah" id="schoolTabs">
+      <button type="button" role="tab" id="tab-ehsan" aria-controls="pane-ehsan" aria-selected="true" data-school="ehsan">EHSAN</button>
+      <button type="button" role="tab" id="tab-smiipsu" aria-controls="pane-smiipsu" aria-selected="false" data-school="smiipsu" tabindex="-1">SMIIPSU</button>
+    </div>
+    <p class="lead tap-hint">Tekan kategori untuk buka senarai. Tekan nama atau kad untuk paparan penuh.</p>
 
-    <section class="aw-panel batik" aria-labelledby="khasTtl">
-      <div class="aw-in">
-        <div class="aw-head"><h3 class="aw-title" id="khasTtl">Anugerah Sahsiah &amp; Anugerah Khas</h3><div class="aw-sub">Sahsiah Murid (QR) · Tokoh · Piala Pusingan</div></div>
-        <h3 class="sect">Anugerah Sahsiah Murid (QR)</h3><span class="rule"></span>
-        <div class="cards stagger" id="sahsiah"></div>
-        <img class="orn aw-div" src="img/ornament.png" alt="">
-        <h3 class="sect">Anugerah Khas</h3><span class="rule"></span>
-        <p class="lead">Penerima anugerah khas akan diumumkan pada hari majlis. Nantikan kejutannya!</p>
-        <div class="sealed stagger">
-      <div class="env"><div><div class="seal">E</div><b>Anugerah Tokoh Hijrah</b><small>Diumumkan pada hari majlis</small></div></div>
-      <div class="env"><div><div class="seal">E</div><b>Anugerah Tokoh Kokurikulum</b><small>Diumumkan pada hari majlis</small></div></div>
-      <div class="env"><div><div class="seal">E</div><b>Anugerah Tokoh Pelajar Mithali</b><small>Diumumkan pada hari majlis</small></div></div>
-      <div class="env"><div><div class="seal">E</div><b>Piala Pusingan Kelas Terbaik</b><small>Diumumkan pada hari majlis</small></div></div>
+    <div id="pane-ehsan" role="tabpanel" aria-labelledby="tab-ehsan">
+      <section class="aw-panel acad" aria-labelledby="acadTtl">
+        <div class="aw-head"><h3 class="aw-title" id="acadTtl">Anugerah Mengikut Tahap</h3><div class="aw-sub">Kedudukan dalam Kelas · Mata Pelajaran Terbaik · Prasekolah</div></div>
+        <div class="accs" id="levelAccs"></div>
+      </section>
+
+      <section class="aw-panel batik" aria-labelledby="khasTtl">
+        <div class="aw-in">
+          <div class="aw-head"><h3 class="aw-title" id="khasTtl">Anugerah Sahsiah &amp; Anugerah Khas</h3><div class="aw-sub">Sahsiah Murid (QR) · Tokoh · Piala Pusingan</div></div>
+          <div class="accs">
+            <details class="acc" name="anugerah" id="acc-sahsiah">
+              <summary><span class="acc-t">Anugerah Sahsiah Murid (QR)</span><span class="acc-n" id="cntSahsiah"></span><i class="acc-ic" aria-hidden="true"></i></summary>
+              <div class="acc-b"><div class="cards" id="sahsiah"></div></div>
+            </details>
+            <details class="acc" name="anugerah" id="acc-khas">
+              <summary><span class="acc-t">Anugerah Khas</span><span class="acc-n">4 anugerah</span><i class="acc-ic" aria-hidden="true"></i></summary>
+              <div class="acc-b">
+                <p class="lead">Penerima anugerah khas akan diumumkan pada hari majlis. Nantikan kejutannya!</p>
+                <div class="sealed">
+                  <div class="env"><div><div class="seal">E</div><b>Anugerah Tokoh Hijrah</b><small>Diumumkan pada hari majlis</small></div></div>
+                  <div class="env"><div><div class="seal">E</div><b>Anugerah Tokoh Kokurikulum</b><small>Diumumkan pada hari majlis</small></div></div>
+                  <div class="env"><div><div class="seal">E</div><b>Anugerah Tokoh Pelajar Mithali</b><small>Diumumkan pada hari majlis</small></div></div>
+                  <div class="env"><div><div class="seal">E</div><b>Piala Pusingan Kelas Terbaik</b><small>Diumumkan pada hari majlis</small></div></div>
+                </div>
+              </div>
+            </details>
+          </div>
         </div>
-      </div>
-    </section>
-  </div>
-</section>
+      </section>
+    </div>
 
-<!-- ================= PENERIMA SMIIPSU ================= -->
-<section class="opener" id="smiipsu">
-  <canvas class="silk" aria-hidden="true"></canvas>
-  <div class="wrap">
-    <img class="orn o-top" src="img/ornament.png" alt="">
-    <h2 class="o-title">Penerima Anugerah<small>SMIIPSU</small></h2>
-    <img class="orn flip o-bot" src="img/ornament.png" alt="">
-  </div>
-</section>
-<section class="page tint">
-  <div class="wrap">
-    <p class="lead" style="margin-bottom:0">Senarai penerima anugerah SMIIPSU akan dikemas kini tidak lama lagi.</p>
+    <div id="pane-smiipsu" role="tabpanel" aria-labelledby="tab-smiipsu" hidden>
+      <section class="aw-panel acad">
+        <div class="aw-head"><h3 class="aw-title">Penerima Anugerah SMIIPSU</h3></div>
+        <p class="lead" style="margin-bottom:0">Senarai penerima anugerah SMIIPSU akan dikemas kini tidak lama lagi.</p>
+      </section>
+    </div>
   </div>
 </section>
 </main>
@@ -774,14 +816,12 @@ function recipientCard(i,catLabel){
     (catLabel?'<div class="cat">'+esc(catLabel)+'</div>':'')+'<div class="nm">'+esc(r.n)+'</div></button>';
 }
 
-/* ================= PAPARAN TAHAP ================= */
-var lv=document.getElementById('levels'),view=document.getElementById('levelView');
-lv.innerHTML=LEVELS.map(function(L,i){return '<button role="tab" type="button" id="tab-'+L.k+'" aria-selected="'+(i===0)+'" aria-controls="levelView" data-k="'+L.k+'">'+L.t+'</button>'}).join('');
+/* ================= PANEL BUKA/TUTUP MENGIKUT TAHAP ================= */
 function podium(k){
   return '<h3 class="sect">Anugerah Kedudukan dalam Kelas</h3><span class="rule"></span><div class="podium">'+IDX.ked[k].map(function(ri,i){
     return '<button type="button" class="pod p'+(i+1)+'" data-rec="'+ri+'"><div class="medal" aria-hidden="true">'+(i+1)+'</div><div class="rk">Tempat '+POS[i]+'</div><div class="nm">'+esc(REC[ri].n)+'</div></button>'}).join('')+'</div>';
 }
-function renderLevel(k){
+function levelHTML(k){
   var h='';
   if(k==='pra'){
     h+='<h3 class="sect">Anugerah Graduasi Murid Prasekolah</h3><span class="rule"></span><ul class="gradlist">'+IDX.grad.map(function(ri){return '<li><button type="button" data-rec="'+ri+'">'+esc(REC[ri].n)+'</button></li>'}).join('')+'</ul>';
@@ -792,20 +832,44 @@ function renderLevel(k){
     h+='<h3 class="sect">Anugerah Mata Pelajaran Terbaik</h3><span class="rule"></span><div class="subjects">'+(IDX.sub[k]||[]).map(function(ri){
       return '<button type="button" class="subj" data-rec="'+ri+'"><div class="sj">'+esc(REC[ri].d.split(' · ')[0])+'</div><div class="nm">'+esc(REC[ri].n)+'</div></button>'}).join('')+'</div>';
   }
-  view.innerHTML=h;
-  view.setAttribute('aria-labelledby','tab-'+k);
-  if(window.gsap&&!reduce){
-    gsap.from(view.querySelectorAll('.pod,.subj,.rcard,.gradlist li'),{y:18,opacity:0,duration:.45,stagger:.03,ease:'power2.out'});
-    gsap.from(view.querySelectorAll('.medal'),{scale:0,duration:.5,stagger:.08,ease:'back.out(2)',delay:.1});
-  }
+  return h;
 }
-lv.addEventListener('click',function(e){
-  var b=e.target.closest('button[data-k]');if(!b||b.getAttribute('aria-selected')==='true')return;
-  lv.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-selected',String(x===b))});
-  renderLevel(b.dataset.k);
-});
-renderLevel('pra');
+function levelCount(k){return IDX.ked[k].length+(k==='pra'?IDX.grad.length+IDX.pra.length:(IDX.sub[k]||[]).length)}
+document.getElementById('levelAccs').innerHTML=LEVELS.map(function(L){
+  return '<details class="acc" name="anugerah" id="acc-'+L.k+'" data-k="'+L.k+'"><summary><span class="acc-t">'+L.t+'</span><span class="acc-n">'+levelCount(L.k)+' anugerah</span><i class="acc-ic" aria-hidden="true"></i></summary><div class="acc-b"></div></details>';
+}).join('');
 document.getElementById('sahsiah').innerHTML=IDX.sah.map(function(ri){return recipientCard(ri,'')}).join('');
+document.getElementById('cntSahsiah').textContent=IDX.sah.length+' penerima';
+
+var ACCS=[].slice.call(document.querySelectorAll('details.acc'));
+ACCS.forEach(function(d){
+  d.addEventListener('toggle',function(){
+    if(!d.open)return;
+    /* hanya satu panel terbuka (sandaran bagi pelayar tanpa sokongan atribut name) */
+    ACCS.forEach(function(o){if(o!==d&&o.open)o.open=false});
+    var body=d.querySelector('.acc-b');
+    if(d.dataset.k&&!body.dataset.done){body.innerHTML=levelHTML(d.dataset.k);body.dataset.done='1'}
+    requestAnimationFrame(function(){
+      var top=d.getBoundingClientRect().top;
+      if(top<64||top>innerHeight*.5)d.scrollIntoView({block:'start',behavior:reduce?'auto':'smooth'});
+    });
+    if(window.gsap&&!reduce){
+      gsap.from(body.querySelectorAll('.pod,.subj,.rcard,.gradlist li,.env,.sect,.lead'),{y:14,opacity:0,duration:.4,stagger:.025,ease:'power2.out',clearProps:'opacity,transform'});
+      gsap.from(body.querySelectorAll('.medal'),{scale:0,duration:.45,stagger:.07,ease:'back.out(2)',delay:.08,clearProps:'transform'});
+    }
+  });
+});
+
+/* Tab sekolah */
+var stabs=[].slice.call(document.querySelectorAll('#schoolTabs [role=tab]'));
+function selectSchool(b,focus){
+  stabs.forEach(function(t){var on=t===b;t.setAttribute('aria-selected',String(on));t.tabIndex=on?0:-1;document.getElementById(t.getAttribute('aria-controls')).hidden=!on});
+  if(focus)b.focus();
+}
+stabs.forEach(function(b,i){
+  b.addEventListener('click',function(){selectSchool(b)});
+  b.addEventListener('keydown',function(e){if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();selectSchool(stabs[(i+(e.key==='ArrowRight'?1:stabs.length-1))%stabs.length],true)}});
+});
 
 /* Klik mana-mana penerima → paparan penerima */
 document.addEventListener('click',function(e){
