@@ -472,7 +472,7 @@ h3.sect{font-family:var(--f-script);font-weight:400;color:var(--gold-d);font-siz
         <p>Sekian, wabillahit taufiq wal hidayah.<br>Wassalamualaikum w.b.t.</p>
       </div>
       <aside class="portrait">
-        <div class="frame pop"><div class="ph"><img class="fit" src="img/rahayu.jpg" alt="Puan Hajah Rahayu binti Norbir" style="object-position:50% 8%"></div></div>
+        <div class="frame pop"><div class="ph"><img class="crop" src="img/rahayu.jpg" alt="Puan Hajah Rahayu binti Norbir" style="--x:0.1676;--y:0.0;--w:0.6406;--h:0.7709"></div></div>
         <div class="sign"><b>Puan Hajah Rahayu binti Norbir</b><span>Ahli Lembaga Pengarah<br>SMIIPSU &amp; EHSAN</span></div>
       </aside>
     </div>
@@ -781,10 +781,10 @@ var SAHSIAH=[
    x,y = penjuru kiri atas kawasan crop; w,h = saiz kawasan crop (nisbah 4:5, bahu ke atas).
    Laraskan nilai di sini jika crop perlu dibetulkan — fail gambar asal tidak diubah. */
 var PHOTO_FOCUS={
- ahnaf:{x:.0899,y:0,w:.9101,h:.9381}, aisyah:{x:.1743,y:0,w:.6582,h:.7048}, ayra:{x:.1561,y:0,w:.6449,h:.7043},
- izznayla:{x:0,y:0,w:1,h:.7823}, izzzara:{x:.1105,y:0,w:.8895,h:.6959}, kaysha:{x:.194,y:0,w:.6916,h:.7493},
+ ahnaf:{x:0.1077,y:0.1133,w:0.7909,h:0.6824}, aisyah:{x:.1743,y:0,w:.6582,h:.7048}, ayra:{x:.1561,y:0,w:.6449,h:.7043},
+ izznayla:{x:0,y:0,w:1,h:.7823}, izzzara:{x:.1105,y:0,w:.8895,h:.6959}, kaysha:{x:0.1313,y:0.1504,w:0.6925,h:0.654},
  mia:{x:.1339,y:0,w:.7842,h:.8392}, nurulaatra:{x:.1709,y:0,w:.6833,h:.7108}, nurzahra:{x:.2021,y:0,w:.6335,h:.6839},
- syedumar:{x:.0793,y:0,w:.9194,h:1}, syedumar2:{x:.0222,y:0,w:.9778,h:1}
+ syedumar:{x:0.0768,y:0.1327,w:0.9023,h:0.7523}, syedumar2:{x:0.0768,y:0.1327,w:0.9023,h:0.7523}
 };
 
 var POS=['Pertama','Kedua','Ketiga'];
@@ -1141,7 +1141,7 @@ function makeCard(r){
       var pw=250,phh=pw*1.25,px=cx-pw/2,py=300;
       x.save();x.beginPath();x.moveTo(px,py+phh);x.lineTo(px,py+pw*.45);x.ellipse(cx,py+pw*.45,pw/2,pw*.45,0,Math.PI,0);x.lineTo(px+pw,py+phh);x.closePath();
       x.fillStyle='#c4963e';x.save();x.translate(0,0);x.lineWidth=10;x.strokeStyle='#c4963e';x.stroke();x.restore();x.clip();x.drawImage(ph,sx,sy,sw,sh,px,py,pw,phh);x.restore();
-      x.fillStyle='#6e1521';x.font='400 96px "Pinyon Script", cursive';x.fillText('Tahniah',cx,py+phh+92);y=py+phh+150;
+      x.fillStyle='#6e1521';x.font='400 96px "Pinyon Script", cursive';x.fillText('Tahniah',cx,py+phh+112);y=py+phh+172;
     }else{
       x.fillStyle='#6e1521';x.font='400 140px "Pinyon Script", cursive';x.fillText('Tahniah',cx,500);
       x.fillStyle='#6f564b';x.font='italic 500 36px "Cormorant Garamond", serif';x.fillText('dengan bangganya diraikan',cx,566);y=670;
