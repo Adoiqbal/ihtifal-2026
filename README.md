@@ -49,3 +49,12 @@ Fail yang diperlukan (jika mahu ganti bunyi digital):
 - Muzik latar instrumental, 1–3 minit, boleh diulang (loop) dengan lancar, ±128 kbps, kurang 3 MB.
 - Fanfare anugerah, 1–2 saat, kurang 100 KB.
 Pastikan fail mempunyai lesen yang membenarkan penggunaan (contohnya ciptaan sendiri atau lesen bebas royalti).
+
+## Buku program (PDF)
+Letakkan fail PDF di `pdf/buku-program-ihtifal-2026.pdf` (nama mesti tepat). Butang "Muat Turun PDF"
+dan "Buka" dalam seksyen Buku Program Digital aktif secara automatik bila fail wujud; jika tiada,
+laman memaparkan "akan dimuat naik tidak lama lagi". Saiz disyorkan bawah 20 MB.
+
+## Tirai pembuka
+Tirai batik di kulit tertutup semasa laman dibuka dan terbuka pada interaksi pertama (sentuh, klik,
+tatal atau kekunci). Pautan terus ke bahagian lain (contohnya `#penerima`) melangkau tirai.

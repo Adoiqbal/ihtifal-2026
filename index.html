@@ -50,6 +50,21 @@ a{color:inherit}
 .curtain::after{content:"";position:absolute;top:0;bottom:0;width:4px;background:linear-gradient(var(--gold-l),var(--gold),var(--gold-d))}
 .curtain.l{left:-47%;border-radius:0 0 60% 0/0 0 16% 0}.curtain.l::after{right:0}
 .curtain.r{right:-47%;border-radius:0 0 0 60%/0 0 0 16%}.curtain.r::after{left:0}
+/* Tirai tertutup sehingga pengunjung menyentuh / klik / tatal */
+.curtain{--shut:87.1%;transition:transform 1.7s cubic-bezier(.7,0,.2,1),border-radius 1.7s}
+.hero.shut .curtain,.hero.opening .curtain{z-index:4}
+.hero.shut .curtain.l{transform:translateX(var(--shut));border-radius:0}
+.hero.shut .curtain.r{transform:translateX(calc(-1 * var(--shut)));border-radius:0}
+.tirai{position:absolute;inset:0;z-index:5;display:grid;justify-items:center;align-items:start;padding-top:max(40px,calc(50vh - 150px));padding-top:max(40px,calc(50svh - 150px));pointer-events:none;opacity:0;visibility:hidden;transition:opacity .5s,visibility .5s}
+.hero.shut .tirai{opacity:1;visibility:visible;pointer-events:auto}
+.tirai-btn{display:grid;justify-items:center;gap:10px;cursor:pointer;background:none;border:0;color:var(--gold-l);font:inherit;padding:20px}
+.tirai-btn .med{width:132px;height:132px;border-radius:50%;display:grid;place-items:center;text-align:center;background:radial-gradient(circle at 50% 35%,var(--maroon-l),var(--maroon-d));box-shadow:0 0 0 2px var(--gold),0 0 0 8px rgba(196,150,62,.18),0 18px 40px rgba(0,0,0,.55);position:relative}
+.tirai-btn .med::after{content:"";position:absolute;inset:-14px;border-radius:50%;border:1px solid rgba(236,213,159,.55);animation:pulse 2.4s ease-out infinite}
+@keyframes pulse{from{transform:scale(.92);opacity:.9}to{transform:scale(1.18);opacity:0}}
+.tirai-btn .med b{font-family:var(--f-script);font-weight:400;font-size:2.1rem;line-height:1;color:#fff4d8}
+.tirai-btn .med small{display:block;font-family:var(--f-caps);font-size:.66rem;letter-spacing:.2em;color:var(--gold-l);margin-top:4px}
+.tirai-btn .cap{font-family:var(--f-caps);font-size:.8rem;letter-spacing:.2em;color:#fff4d8;text-shadow:0 2px 8px rgba(0,0,0,.6);background:rgba(42,6,11,.55);padding:8px 16px;border-radius:999px;border:1px solid rgba(236,213,159,.45)}
+.tirai-btn:hover .med{box-shadow:0 0 0 2px var(--gold-l),0 0 0 8px rgba(196,150,62,.3),0 18px 40px rgba(0,0,0,.55)}
 .hero-in{position:relative;z-index:2;max-width:640px}
 .arch{position:relative;background:var(--ivory);color:var(--ink);border-radius:300px 300px 16px 16px/230px 230px 16px 16px;padding:58px clamp(20px,5vw,44px) 34px;
   box-shadow:0 0 0 2px var(--gold),0 0 0 8px var(--maroon),0 0 0 9px var(--gold-d),0 28px 60px rgba(0,0,0,.5)}
@@ -75,6 +90,8 @@ a{color:inherit}
 .facts dd b{font-weight:700;color:var(--maroon)}
 .facts dd small{display:block;color:var(--muted);font-size:.9rem;font-style:italic}
 .ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:24px}
+.cta-dl{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-family:var(--f-caps);font-size:.72rem;letter-spacing:.14em;color:var(--gold-d);text-decoration:none;border-bottom:1px solid var(--line);padding:4px 2px}
+.cta-dl:hover{color:var(--maroon);border-color:var(--gold)}
 .cta{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:10px 24px;border-radius:999px;text-decoration:none;font-family:var(--f-caps);font-size:.76rem;letter-spacing:.14em;font-weight:600;transition:transform .2s,box-shadow .2s,background .2s,color .2s}
 .cta.primary{background:var(--maroon);color:var(--gold-l);box-shadow:0 6px 18px rgba(110,21,33,.25)}
 .cta.primary:hover{background:var(--maroon-l);transform:translateY(-1px)}
@@ -256,6 +273,20 @@ h3.sect{font-family:var(--f-script);font-weight:400;color:var(--gold-d);font-siz
 .acc-b{padding:6px 16px 20px}
 .acc-b h3.sect:first-child{margin-top:12px}
 .aw-panel.batik .acc{background:var(--ivory)}
+/* Muat turun buku program (PDF) */
+.dl-band{position:relative;background:var(--ivory-2);padding-block:56px;border-top:1px solid var(--line)}
+.dl-band>.wrap{padding-left:max(44px,env(safe-area-inset-left,0px));padding-right:max(44px,env(safe-area-inset-right,0px))}
+.dl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:34px;align-items:center;max-width:760px;margin-inline:auto;background:#fff;border:1px solid var(--line);border-radius:10px;padding:28px;box-shadow:var(--shadow)}
+.book{width:150px;aspect-ratio:1/1.414;border-radius:3px 9px 9px 3px;position:relative;background:linear-gradient(90deg,rgba(0,0,0,.35),rgba(255,255,255,.08) 7%,transparent 12%),url(img/batik-tile.jpg) 0 0/90px,var(--maroon);box-shadow:0 0 0 1px var(--gold-d),10px 14px 26px rgba(61,18,24,.28);display:grid;place-items:center;transform:rotate(-3deg)}
+.book::after{content:"";position:absolute;right:-6px;top:4px;bottom:4px;width:6px;border-radius:0 4px 4px 0;background:repeating-linear-gradient(#fffaf1 0 2px,#e9dfcc 2px 3px)}
+.book div{width:76%;background:var(--ivory);border:1px solid var(--gold);border-radius:60px 60px 4px 4px/48px 48px 4px 4px;text-align:center;padding:14px 6px 10px;line-height:1.1}
+.book b{display:block;font-family:var(--f-script);font-weight:400;color:var(--maroon);font-size:1.25rem}
+.book small{display:block;font-family:var(--f-caps);font-size:.5rem;letter-spacing:.12em;color:var(--gold-d);margin-top:6px}
+.dl h2{font-family:var(--f-script);font-weight:400;color:var(--maroon);font-size:clamp(2rem,7vw,2.6rem);margin:0;line-height:1.1}
+.dl p{margin:6px 0 0;color:var(--muted)}
+.dl-meta{font-family:var(--f-caps);font-size:.72rem;letter-spacing:.12em;color:var(--gold-d);margin-top:8px}
+.dl-acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.dl-acts .cta[aria-disabled="true"]{opacity:.45;pointer-events:none;box-shadow:none}
 /* Anugerah khas (rahsia) */
 .sealed{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,190px),1fr));gap:16px}
 .env{position:relative;aspect-ratio:4/3;border-radius:4px;overflow:hidden;background:url(img/batik-tile.jpg) 0 0/160px,var(--maroon);border:1px solid var(--gold);display:grid;place-items:center;text-align:center;padding:16px;color:var(--ivory);box-shadow:0 10px 24px rgba(61,18,24,.22)}
@@ -337,6 +368,10 @@ h3.sect{font-family:var(--f-script);font-weight:400;color:var(--gold-d);font-siz
   .facts div+div{border-left:0;border-top:1px solid var(--line)}
   .crest .lg{width:76px;height:76px}
   .curtain.l{left:-50%}.curtain.r{right:-50%}
+  .curtain{--shut:92.6%}
+  .dl{grid-template-columns:1fr;justify-items:center;text-align:center;gap:22px;padding:24px 16px}
+  .dl-acts{justify-content:center}
+  .dl-band>.wrap{padding-left:max(30px,env(safe-area-inset-left,0px));padding-right:max(30px,env(safe-area-inset-right,0px))}
   .arch{border-radius:200px 200px 14px 14px/150px 150px 14px 14px;padding-top:44px}
   .arch::before{border-radius:190px 190px 8px 8px/142px 142px 8px 8px}
 }
@@ -371,7 +406,8 @@ h3.sect{font-family:var(--f-script);font-weight:400;color:var(--gold-d);font-siz
   body{font-size:17px}
   .crest{gap:12px}
   .crest .lg{width:64px;height:64px}
-  .curtain{display:none}
+  .hero:not(.shut):not(.opening) .curtain{display:none}
+  .tirai-btn .med{width:116px;height:116px}
   .countdown{gap:6px}
   .countdown div{min-width:0;flex:1 1 0}
   .countdown b{font-size:1.6rem}
@@ -384,7 +420,8 @@ h3.sect{font-family:var(--f-script);font-weight:400;color:var(--gold-d);font-siz
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  .env::after,.eq rect{animation:none}
+  .env::after,.eq rect,.tirai-btn .med::after{animation:none}
+  .curtain{transition:none}
   *{transition-duration:.01ms!important}
 }
 </style>
@@ -395,6 +432,7 @@ h3.sect{font-family:var(--f-script);font-weight:400;color:var(--gold-d);font-siz
 <header class="hero" id="kulit">
   <canvas id="sparkle" aria-hidden="true"></canvas>
   <div class="curtain l" aria-hidden="true"></div><div class="curtain r" aria-hidden="true"></div>
+  <div class="tirai"><button class="tirai-btn" id="tiraiBtn" type="button" aria-label="Buka tirai"><span class="med"><span><b>Ihtifal</b><small>2026</small></span></span><span class="cap">Sentuh untuk buka tirai</span></button></div>
   <div class="wrap hero-in">
     <div class="arch">
       <div class="crest h-in">
@@ -418,6 +456,7 @@ h3.sect{font-family:var(--f-script);font-weight:400;color:var(--gold-d);font-siz
         <a class="cta primary" href="#sekapur">Buku Program</a>
         <a class="cta outline" href="#penerima">Senarai Penerima</a>
       </div>
+      <a class="cta-dl h-in" href="#muat-turun">↓ Muat turun buku program (PDF)</a>
     </div>
     <div class="status" aria-live="polite">
       <div class="status-lbl" id="stLabel">Menuju hari majlis</div>
@@ -432,6 +471,23 @@ h3.sect{font-family:var(--f-script);font-weight:400;color:var(--gold-d);font-siz
     <div class="legacy">Legacy of the Walking Quran &nbsp;·&nbsp; Legacy of the Excellencies</div>
   </div>
 </header>
+<script>
+/* Tirai: tertutup sehingga interaksi pertama. Skrip kecil ini berdiri sendiri supaya tirai tetap boleh dibuka walaupun skrip utama gagal. */
+(function(){
+  var h=document.getElementById('kulit'),ev=['pointerdown','keydown','wheel','touchmove','scroll'],done=false;
+  if(location.hash&&location.hash!=='#kulit'){window.bukaTirai=function(){};return}
+  h.classList.add('shut');
+  function buka(){
+    if(done)return;done=true;
+    ev.forEach(function(t){removeEventListener(t,buka,true)});
+    h.classList.remove('shut');h.classList.add('opening');
+    setTimeout(function(){h.classList.remove('opening')},1800);
+    document.dispatchEvent(new Event('tirai:buka'));
+  }
+  ev.forEach(function(t){addEventListener(t,buka,{capture:true,passive:true})});
+  window.bukaTirai=buka;
+})();
+</script>
 
 <nav class="toc" aria-label="Isi kandungan">
   <div class="wrap"><ul>
@@ -440,6 +496,7 @@ h3.sect{font-family:var(--f-script);font-weight:400;color:var(--gold-d);font-siz
     <li><a href="#objektif">Objektif</a></li>
     <li><a href="#jawatankuasa">Jawatankuasa</a></li>
     <li><a href="#penerima">Penerima Anugerah</a></li>
+    <li><a href="#muat-turun">Buku Program (PDF)</a></li>
   </ul></div>
 </nav>
 
@@ -691,6 +748,23 @@ h3.sect{font-family:var(--f-script);font-weight:400;color:var(--gold-d);font-siz
           </div>
         </div>
       </section>
+    </div>
+  </div>
+</section>
+<!-- ================= MUAT TURUN BUKU PROGRAM ================= -->
+<section class="dl-band" id="muat-turun" aria-labelledby="dlTtl">
+  <div class="wrap">
+    <div class="dl">
+      <div class="book" aria-hidden="true"><div><b>Buku Program</b><small>Ihtifal 2026</small></div></div>
+      <div>
+        <h2 id="dlTtl">Buku Program Digital</h2>
+        <p>Muat turun buku program Majlis Anugerah Kecemerlangan dan Graduasi SMIIPSU | EHSAN 2026 dalam format PDF untuk disimpan atau dikongsi.</p>
+        <div class="dl-meta" id="dlMeta">Menyemak fail…</div>
+        <div class="dl-acts">
+          <a class="cta primary" id="dlBtn" href="#muat-turun" aria-disabled="true">Muat Turun PDF</a>
+          <a class="cta outline" id="dlView" href="#muat-turun" target="_blank" rel="noopener" aria-disabled="true">Buka</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1284,12 +1358,31 @@ function silk(cv){
 }
 [].forEach.call(document.querySelectorAll('canvas.silk'),silk);
 
+/* ================= BUKU PROGRAM (PDF) =================
+   Letak fail PDF di laluan PROGRAM_PDF (folder pdf/ dalam repo). Butang muat turun
+   aktif secara automatik bila fail wujud. */
+var PROGRAM_PDF='pdf/buku-program-ihtifal-2026.pdf';
+(function(){
+  var btn=document.getElementById('dlBtn'),view=document.getElementById('dlView'),meta=document.getElementById('dlMeta');
+  function notYet(){meta.textContent='Buku program PDF akan dimuat naik tidak lama lagi.'}
+  if(!window.fetch){notYet();return}
+  fetch(PROGRAM_PDF,{method:'HEAD',cache:'no-store'}).then(function(r){
+    if(!r.ok)return notYet();
+    var n=+r.headers.get('content-length')||0;
+    btn.href=view.href=PROGRAM_PDF;btn.setAttribute('download','Buku-Program-Ihtifal-2026.pdf');
+    btn.removeAttribute('aria-disabled');view.removeAttribute('aria-disabled');
+    meta.textContent='PDF'+(n?' · '+(n>=1048576?(n/1048576).toFixed(1)+' MB':Math.max(1,Math.round(n/1024))+' KB'):'');
+  }).catch(notYet);
+})();
+
 /* ================= ANIMASI GSAP ================= */
 if(window.gsap&&window.ScrollTrigger&&!reduce){
   gsap.registerPlugin(ScrollTrigger);
-  gsap.from('.hero .h-in',{y:18,opacity:0,duration:.7,stagger:.08,ease:'power2.out',delay:.1});
-  gsap.from('.curtain.l',{xPercent:40,duration:1.6,ease:'power3.inOut'});gsap.from('.curtain.r',{xPercent:-40,duration:1.6,ease:'power3.inOut'});
-  gsap.from('.arch',{y:24,opacity:0,duration:1,ease:'power2.out',delay:.2});
+  function heroIn(){
+    gsap.from('.arch',{y:24,opacity:0,duration:1,ease:'power2.out',delay:.35,clearProps:'opacity,transform'});
+    gsap.from('.hero .h-in',{y:18,opacity:0,duration:.7,stagger:.08,ease:'power2.out',delay:.55,clearProps:'opacity,transform'});
+  }
+  if(document.getElementById('kulit').classList.contains('shut'))document.addEventListener('tirai:buka',heroIn,{once:true});
   function inView(el){return el.getBoundingClientRect().top<innerHeight*.92}
   gsap.utils.toArray('.opener').forEach(function(op){
     var t=gsap.timeline({scrollTrigger:{trigger:op,start:'top 78%',once:true}});
