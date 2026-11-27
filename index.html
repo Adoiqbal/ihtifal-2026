@@ -159,7 +159,8 @@ h3.sect{font-family:var(--f-script);font-weight:400;color:var(--gold-d);font-siz
 .timeline::before{content:"";position:absolute;left:94px;top:8px;bottom:8px;width:2px;background:rgba(196,150,62,.25)}
 .timeline .line{position:absolute;left:94px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--gold-l),var(--gold),var(--gold-d));transform-origin:top}
 .slot{display:grid;grid-template-columns:80px minmax(0,1fr);gap:30px;padding-block:14px;position:relative}
-.slot time{justify-self:end;font-family:var(--f-caps);font-size:.82rem;font-weight:600;color:var(--gold-l);background:var(--green);padding:6px 10px;border-radius:6px;height:max-content;white-space:nowrap;font-variant-numeric:tabular-nums}
+.slot time{justify-self:end;text-align:center;line-height:1.25;font-family:var(--f-caps);font-size:.8rem;font-weight:600;color:var(--gold-l);background:var(--green);padding:6px 8px;border-radius:6px;height:max-content;font-variant-numeric:tabular-nums}
+.slot>div>ul:first-child{margin-top:6px}
 .slot::after{content:"";position:absolute;left:89px;top:22px;width:12px;height:12px;border-radius:50%;background:var(--ivory);border:2px solid var(--gold)}
 .slot h4{font-family:var(--f-caps);font-size:.92rem;letter-spacing:.06em;color:var(--maroon);margin:4px 0 6px}
 .slot ul{margin:0 0 12px;padding-left:18px}
@@ -551,45 +552,55 @@ h3.sect{font-family:var(--f-script);font-weight:400;color:var(--gold-d);font-siz
   <div class="wrap">
     <ol class="timeline" id="timeline">
       <li class="line" aria-hidden="true"></li>
-      <li class="slot"><time>7.30 Pagi</time><div><h4>Ketibaan Jemputan &amp; Pendaftaran</h4></div></li>
-      <li class="slot"><time>8.00 Pagi</time><div><h4>Majlis Bermula</h4><ul>
-        <li>Ketibaan Tetamu Kehormat (Iringan Selawat)</li>
-        <li>Nyanyian Lagu Kebangsaan &amp; Asmaul Husna</li>
-        <li>Kata Alu-aluan Pengacara &amp; Bacaan Doa</li>
+      <li class="slot"><time>7.30<br>Pagi</time><div><h4>Pendaftaran</h4><ul>
+        <li>Ketibaan wakil ibu bapa/penjaga dan murid untuk pendaftaran</li>
+        <li>Ibu bapa/penjaga mengambil tempat di dalam dewan</li></ul></div></li>
+      <li class="slot"><time>8.00 – 8.45<br>Pagi</time><div><h4>Majlis Bermula</h4><ul>
+        <li>Ketibaan pentadbir dan perasmi dengan iringan selawat</li>
+        <li>Alunan Asmaul Husna dan lagu Negaraku</li>
+        <li>Ucapan alu-aluan pengacara majlis</li>
+        <li>Bacaan doa</li>
+        <li>Ucapan Wakil Ibu Bapa (En. Mohd Naufal bin Mohd Bakhudin, Senior Manager, Coway Malaysia Sdn Bhd)</li>
         <li>Ucapan Pengetua SMIIPSU (Puan Siti Khaulah binti Sokhibul Fadil)</li>
         <li>Ucapan Guru Besar EHSAN (Encik Muhammad Iqbal Hakim bin Saiful Affandee)</li>
         <li>Ucapan Pengerusi SMIIPSU &amp; EHSAN (Puan Rahayu binti Norbir)</li>
-        <li>Ucapan dan Perasmian YDP</li>
-        <li>Penyampaian Cenderamata Penghargaan</li>
-        <li>Tayangan Multimedia Aktiviti SMIIPSU &amp; EHSAN</li></ul></div></li>
-      <li class="slot"><time>8.45 Pagi</time><div><h4>Penyampaian Anugerah Sesi 1</h4><ul>
-        <li>Anugerah Graduasi Pelajar Prasekolah</li>
+        <li>Ucapan dan perasmian YDP</li>
+        <li>Gimik perasmian</li>
+        <li>Video Montaj 1 Dekad SMIIPSU &amp; Kelab Pembangunan Pendidikan EHSAN</li>
+        <li>Penyampaian cenderahati perasmi &amp; wakil ibu bapa</li></ul></div></li>
+      <li class="slot"><time>8.45<br>Pagi</time><div><h4>Penyampaian Anugerah Pelajar Sesi 1 – VIP</h4><ul>
+        <li>Anugerah Graduasi Pelajar Prasekolah (4)</li>
+        <li>Anugerah Graduasi Pelajar Tahun 6 (10) &amp; PSRA (5)</li>
+        <li>Anugerah Graduasi Murid Tingkatan 5 (6)</li>
         <li>Anugerah Kedudukan dalam Kelas Prasekolah</li>
-        <li>Anugerah Graduasi Pelajar Tahun 6 (EHSAN)</li>
-        <li>Anugerah Kedudukan dalam Kelas Pelajar Tahun 6 (EHSAN)</li>
-        <li>Anugerah Mata Pelajaran Terbaik Pelajar Tahun 6 (EHSAN)</li>
-        <li>Anugerah Kecemerlangan SPM GASIS (SMIIPSU)</li>
-        <li>Anugerah Graduasi Pelajar Tingkatan 5 (SMIIPSU)</li>
-        <li>Anugerah Kedudukan dalam Kelas Pelajar Tingkatan 5 (SMIIPSU)</li></ul></div></li>
-      <li class="slot"><time>9.10 Pagi</time><div><h4>Tayangan Multimedia Aktiviti SMIIPSU &amp; EHSAN</h4><h4>Cabutan Rezeki Pertama</h4><h4>Penyampaian Anugerah Sesi 2</h4><ul>
+        <li>Anugerah Kedudukan dalam Kelas Tahun 6</li>
+        <li>Anugerah Kedudukan dalam Kelas Tingkatan 5</li></ul></div></li>
+      <li class="slot"><time>9.10<br>Pagi</time><div><ul>
+        <li>Video Aktiviti SMIIPSU &amp; EHSAN</li>
+        <li>Sesi Apresiasi Ibu Bapa (Puan Rahayu binti Norbir)</li></ul></div></li>
+      <li class="slot"><time>9.25<br>Pagi</time><div><h4>Penyampaian Anugerah Pelajar Sesi 2 – Pengerusi SMIIPSU &amp; EHSAN</h4><ul>
         <li>Anugerah Kedudukan dalam Kelas EHSAN</li>
-        <li>Anugerah Mata Pelajaran Terbaik Pelajar EHSAN</li>
+        <li>Anugerah Mata Pelajaran Terbaik EHSAN</li>
         <li>Anugerah Kedudukan dalam Kelas SMIIPSU</li>
-        <li>Anugerah Mata Pelajaran Terbaik Pelajar SMIIPSU</li></ul></div></li>
-      <li class="slot"><time>9.25 Pagi</time><div><h4>Persembahan Pelajar</h4><ul>
-        <li>Persembahan Pelajar EHSAN</li><li>Persembahan Prasekolah EHSAN</li></ul>
-        <h4>Penyampaian Anugerah Sesi 3</h4><ul>
-        <li>Anugerah Terbaik Murid Prasekolah</li>
+        <li>Anugerah Mata Pelajaran Terbaik SMIIPSU</li></ul></div></li>
+      <li class="slot"><time>9.55<br>Pagi</time><div><h4>Persembahan Pelajar</h4><ul>
+        <li>Persembahan Pelajar EHSAN</li>
+        <li>Persembahan Prasekolah EHSAN</li></ul></div></li>
+      <li class="slot"><time>10.15<br>Pagi</time><div><h4>Penyampaian Anugerah Pelajar Sesi 3 – Guru Besar</h4><ul>
+        <li>Anugerah Terbaik Prasekolah</li>
         <li>Anugerah Sahsiah Murid (QR) EHSAN</li>
         <li>Anugerah Sahsiah Murid (QR) SMIIPSU</li>
-        <li>Anugerah Huffaz Milenia SMIIPSU</li></ul></div></li>
-      <li class="slot"><time>11.15 Pagi</time><div><h4>Anugerah Khas EHSAN</h4><ul>
-        <li>Anugerah Tokoh Hijrah</li><li>Anugerah Tokoh Kokurikulum</li><li>Anugerah Tokoh Pelajar Mithali</li></ul>
-        <h4>Anugerah Khas SMIIPSU</h4><ul>
-        <li>Anugerah Piala Pusingan Kelas Terbaik</li><li>Anugerah Tokoh Kokurikulum</li><li>Anugerah Tokoh Pelajar Mithali</li><li>Anugerah The Walking Quran</li></ul>
-        <h4>Persembahan SMIIPSU</h4></div></li>
-      <li class="slot"><time>11.50 Pagi</time><div><h4>Sesi Bergambar</h4></div></li>
-      <li class="slot"><time>12.00 T/Hari</time><div><h4>Majlis Bersurai</h4></div></li>
+        <li>Anugerah Kehadiran Terbaik (SMIIPSU)</li>
+        <li>Anugerah Huffaz Milenia SMIIPSU</li></ul>
+        <h4>Anugerah Khas EHSAN – Guru Besar</h4><ul>
+        <li>Anugerah Kelas Terbaik</li><li>Anugerah Tokoh Kokurikulum</li><li>Anugerah Tokoh Pelajar Mithali</li><li>Anugerah Tokoh Hijrah</li></ul>
+        <h4>Anugerah Khas SMIIPSU – Pengetua</h4><ul>
+        <li>Anugerah Kelas Terbaik</li><li>Anugerah Tokoh Kokurikulum</li><li>Anugerah Tokoh Pelajar Mithali</li><li>Anugerah The Walking Quran</li></ul></div></li>
+      <li class="slot"><time>11.15<br>Pagi</time><div><ul>
+        <li>Cabutan Rezeki (12 cabutan) &amp; Lagu SMIIPSU</li>
+        <li>Persembahan SMIIPSU</li></ul></div></li>
+      <li class="slot"><time>11.30<br>Pagi</time><div><h4>Sesi Bergambar</h4></div></li>
+      <li class="slot"><time>11.45 – 12.00<br>T/Hari</time><div><h4>Majlis Bersurai</h4></div></li>
     </ol>
   </div>
 </section>
