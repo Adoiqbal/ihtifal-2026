@@ -26,7 +26,10 @@ Semua data penerima ada dalam `index.html`, di bahagian `/* ================= DA
 (`KEDUDUKAN`, `SUBJEK`, `GRADUASI`, `TERBAIK_PRA`, `SAHSIAH`).
 
 ## Hosting
-Laman statik. Aktifkan GitHub Pages: Settings → Pages → Deploy from branch → `main` / root.
+Laman statik di GitHub Pages (Settings → Pages → Deploy from branch → `main` / root).
+Domain: **https://ihtifal.ehsanschool.edu.my** (fail `CNAME`). DNS diurus di Cloudflare:
+rekod `CNAME ihtifal → adoiqbal.github.io`, status *DNS only*. Jika nameserver domain ditukar
+kemudian, rekod ini mesti ditambah semula di penyedia DNS baharu.
 
 ## Gambar penerima
 Gambar dipaparkan dalam nisbah 4:5 (bahu ke atas). Kedudukan crop setiap gambar ditetapkan dalam
