@@ -716,13 +716,13 @@ h3.sect{font-family:var(--f-script);font-weight:400;color:var(--gold-d);font-siz
 
     <div id="pane-smiipsu" role="tabpanel" aria-labelledby="tab-smiipsu" hidden>
       <section class="aw-panel acad" aria-labelledby="smAcadTtl">
-        <div class="aw-head"><h3 class="aw-title" id="smAcadTtl">Anugerah Mengikut Tingkatan</h3><div class="aw-sub">Kedudukan dalam Kelas · Mata Pelajaran Terbaik</div></div>
+        <div class="aw-head"><h3 class="aw-title" id="smAcadTtl">Anugerah Mengikut Tingkatan</h3><div class="aw-sub">Kedudukan dalam Kelas · Mata Pelajaran Terbaik · Graduasi</div></div>
         <div class="accs" id="smLevelAccs"></div>
       </section>
 
       <section class="aw-panel batik" aria-labelledby="smKhasTtl">
         <div class="aw-in">
-          <div class="aw-head"><h3 class="aw-title" id="smKhasTtl">Anugerah Sahsiah, Huffaz &amp; Anugerah Khas</h3><div class="aw-sub">Sahsiah Murid (QR) · Huffaz Milenia · Tokoh · The Walking Quran</div></div>
+          <div class="aw-head"><h3 class="aw-title" id="smKhasTtl">Anugerah Sahsiah, Huffaz &amp; Anugerah Khas</h3><div class="aw-sub">Sahsiah Murid (QR) · Huffaz Milenia · Kehadiran · Tokoh · The Walking Quran</div></div>
           <div class="accs">
             <details class="acc" name="anugerah" id="acc-smsahsiah">
               <summary><span class="acc-t">Anugerah Sahsiah Murid (QR)</span><span class="acc-n" id="cntSmSahsiah"></span><i class="acc-ic" aria-hidden="true"></i></summary>
@@ -731,6 +731,10 @@ h3.sect{font-family:var(--f-script);font-weight:400;color:var(--gold-d);font-siz
             <details class="acc" name="anugerah" id="acc-smhuffaz">
               <summary><span class="acc-t">Anugerah Huffaz Milenia</span><span class="acc-n" id="cntSmHuffaz"></span><i class="acc-ic" aria-hidden="true"></i></summary>
               <div class="acc-b"><div class="subjects" id="smHuffaz"></div></div>
+            </details>
+            <details class="acc" name="anugerah" id="acc-smhadir">
+              <summary><span class="acc-t">Anugerah Kehadiran Terbaik</span><span class="acc-n" id="cntSmHadir"></span><i class="acc-ic" aria-hidden="true"></i></summary>
+              <div class="acc-b"><div class="subjects" id="smHadir"></div></div>
             </details>
             <details class="acc" name="anugerah" id="acc-smkhas">
               <summary><span class="acc-t">Anugerah Khas</span><span class="acc-n">5 anugerah</span><i class="acc-ic" aria-hidden="true"></i></summary>
@@ -895,13 +899,13 @@ var PHOTO_FOCUS={ aisyah:{x:.1743,y:0,w:.6582,h:.7048},
 var SM_LEVELS=[{k:'T1',t:'Tingkatan 1'},{k:'T2',t:'Tingkatan 2'},{k:'T3',t:'Tingkatan 3'},{k:'T4',t:'Tingkatan 4'},{k:'T5',t:'Tingkatan 5'}];
 var SM_KEDUDUKAN={
  T1:['EMIR SATRIA BIN MOHD FAHMI','NUHA ARDINI BINTI A K NAZARUDDIN','FATIN HUMAIRA BINTI MOHD FAIZUL EZMIN'],
- T2:['AHMAD SAYYIDI BIN NOR AFFENDI','MUHAMMAD AQYIL ASRAFF BIN OMAR HAMZAH','MARISSA SUFFIYAH BINTI MOHD NAUFAL'],
+ T2:['AHMAD SAYYIDI BIN NOR AFFENDI','MUHAMMAD AQYIL ASRAFF BIN OMAR HAMZAH','MARISSA SUFIYYAH BINTI MOHD NAUFAL'],
  T3:['AMEERA FAEEZAH BINTI AHMAD SYAHRIR','AISYA ROSE MARYAM BINTI ARZHAD','AHMAD UBAYDAH BIN DAHISHAM'],
- T4:['MUHAMMAD MUSTAFA BIN MOHD SYAHRIL','CHEMPAKA MARISSA BINTI MOHD FAHMI','MUHAMMAD ASYRAAF BIN ABDUL RAHMAN'],
+ T4:['MUHAMMAD MUSTAFA BIN MOHD SYAHRIL','CHEMPAKA MARISSA BINTI MOHD FAHMI','NURUL ATIQAH BINTI NURULAZWANI'],
  T5:['MUHAMMAD AQIL MUNIR BIN NIZAM','ASYRAF DANISH BIN ABDOLLAH','QALIFF HAREEZ BIN HEFRIZUL']
 };
 var SM_SUBJEK=[
- ['Bahasa Melayu',{T1:'EMIR SATRIA BIN MOHD FAHMI',T2:'AHMAD SAYYIDI BIN NOR AFFENDI',T3:'AUNI NABIHA BT HARIS AFIDZAN',T4:'MUHAMMAD MUSTAFA BIN MOHD SYAHRIL',T5:'MUHAMMAD AQIL MUNIR BIN NIZAM'}],
+ ['Bahasa Melayu',{T1:'EMIR SATRIA BIN MOHD FAHMI',T2:'AHMAD SAYYIDI BIN NOR AFFENDI',T3:'AUNI NABIHA BINTI HARIS AFIDZAN',T4:'MUHAMMAD MUSTAFA BIN MOHD SYAHRIL',T5:'MUHAMMAD AQIL MUNIR BIN NIZAM'}],
  ['Bahasa Inggeris',{T1:'EMIR SATRIA BIN MOHD FAHMI',T2:'AHMAD SAYYIDI BIN NOR AFFENDI',T3:'AHMAD UBAYDAH BIN DAHISHAM',T4:'CHEMPAKA MARISSA BINTI MOHD FAHMI',T5:'ASYRAF DANISH BIN ABDOLLAH'}],
  ['Matematik',{T1:'EMIR SATRIA BIN MOHD FAHMI',T2:'AHMAD SAYYIDI BIN NOR AFFENDI',T3:'MUHAMMAD AFFAN AL AMIN BIN MUHAMMAD HAZAMIN',T4:'CHEMPAKA MARISSA BINTI MOHD FAHMI',T5:'MUHAMMAD AQIL MUNIR BIN NIZAM'}],
  ['Sains',{T1:'NUHA ARDINI BINTI A K NAZARUDDIN',T2:'MUHAMMAD AQYIL ASRAFF BIN OMAR HAMZAH',T3:'AHMAD UBAYDAH BIN DAHISHAM',T4:'MUHAMMAD MUSTAFA BIN MOHD SYAHRIL',T5:'ASYRAF DANISH BIN ABDOLLAH'}],
@@ -910,7 +914,7 @@ var SM_SUBJEK=[
  ['Pendidikan Quran Sunnah',{T4:'MUHAMMAD MUSTAFA BIN MOHD SYAHRIL',T5:'MUHAMMAD AQIL MUNIR BIN NIZAM'}],
  ['Reka Bentuk & Teknologi',{T1:'NUHA ARDINI BINTI A K NAZARUDDIN',T2:'AHMAD SAYYIDI BIN NOR AFFENDI',T3:'AMEERA FAEEZAH BINTI AHMAD SYAHRIR'}],
  ['Sejarah',{T1:'NUHA ARDINI BINTI A K NAZARUDDIN',T2:'MUHAMMAD AQYIL ASRAFF BIN OMAR HAMZAH',T3:'AMEERA FAEEZAH BINTI AHMAD SYAHRIR',T4:'CHEMPAKA MARISSA BINTI MOHD FAHMI',T5:'QALIFF HAREEZ BIN HEFRIZUL'}],
- ['Bahasa Arab',{T1:'FATIN HUMAIRA BINTI MOHD FAIZUL EZMIN',T2:'AHMAD SAYYIDI BIN NOR AFFENDI',T3:'AUNI NABIHA BT HARIS AFIDZAN',T4:'MUHAMMAD MUSTAFA BIN MOHD SYAHRIL',T5:'MUHAMMAD AQIL MUNIR BIN NIZAM'}],
+ ['Bahasa Arab',{T1:'FATIN HUMAIRA BINTI MOHD FAIZUL EZMIN',T2:'AHMAD SAYYIDI BIN NOR AFFENDI',T3:'AUNI NABIHA BINTI HARIS AFIDZAN',T4:'MUHAMMAD MUSTAFA BIN MOHD SYAHRIL',T5:'MUHAMMAD AQIL MUNIR BIN NIZAM'}],
  ['Geografi',{T1:'NUHA ARDINI BINTI A K NAZARUDDIN',T2:'MUHAMMAD AQYIL ASRAFF BIN OMAR HAMZAH',T3:'AMEERA FAEEZAH BINTI AHMAD SYAHRIR'}],
  ['Ekonomi',{T4:'CHEMPAKA MARISSA BINTI MOHD FAHMI'}],
  ['Prinsip Akaun',{T4:'CHEMPAKA MARISSA BINTI MOHD FAHMI'}],
@@ -918,7 +922,9 @@ var SM_SUBJEK=[
  ['Hafazan',{T1:'EMIR SATRIA BIN MOHD FAHMI',T2:'AHMAD SAYYIDI BIN NOR AFFENDI',T3:'AIQAZ RATNA BIN NARONG'}],
  ['Tasawwur',{T4:'MUHAMMAD MUSTAFA BIN MOHD SYAHRIL',T5:'QALIFF HAREEZ BIN HEFRIZUL'}]
 ];
-var SM_SAHSIAH=[['HARITH DANIAL BIN ZAINI','Lelaki'],['MARISSA SUFFIYAH BINTI MOHD NAUFAL','Perempuan']];
+var SM_SAHSIAH=[['HARITH DANIAL BIN ZAINI','Lelaki'],['MARISSA SUFIYYAH BINTI MOHD NAUFAL','Perempuan']];
+var SM_GRADUASI=['ASYRAF DANISH BIN ABDOLLAH','IMAN ADELIA BINTI ABDUL RAHMAN','MUHAMMAD ANIQ AFKAR BIN MOHAMMAD AZIZUL','MUHAMMAD AQIL MUNIR BIN NIZAM','MUHAMMAD ILHAM UQAILSYAHMI BIN HARIS AFIDZAN','QALIFF HAREEZ BIN HEFRIZUL'];
+var SM_KEHADIRAN=['EMIR SATRIA BIN MOHD FAHMI'];
 var SM_HUFFAZ=[['ABDUL MUHAIMIN BIN MOHD AFIQ','Kategori Hafazan Baru (Lelaki)'],['SAFIYA ADRIANA BINTI SYAHRIZAL','Kategori Hafazan Baru (Perempuan)'],['AIQAZ RATNA BIN NARONG','Kategori Ulangan']];
 
 var POS=['Pertama','Kedua','Ketiga'];
@@ -928,7 +934,7 @@ function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;
 /* Rekod tunggal untuk setiap anugerah: {n:nama, a:anugerah, d:butiran, p:gambar|null} */
 var REC=[];
 function add(n,a,d,p,sc){REC.push({n:n,a:a,d:d,p:p||null,s:sc||'EHSAN'});return REC.length-1}
-var IDX={ked:{},sub:{},grad:[],pra:[],sah:[],smSah:[],smHuf:[]};
+var IDX={ked:{},sub:{},grad:[],pra:[],sah:[],smSah:[],smHuf:[],smGrad:[],smHad:[]};
 Object.keys(KEDUDUKAN).forEach(function(k){IDX.ked[k]=KEDUDUKAN[k].map(function(n,i){return add(n,'Anugerah Kedudukan dalam Kelas','Tempat '+POS[i]+' · '+lvlName(k))})});
 SUBJEK.forEach(function(s){Object.keys(s[1]).forEach(function(t){(IDX.sub[t]=IDX.sub[t]||[]).push(add(s[1][t],'Anugerah Mata Pelajaran Terbaik',s[0]+' · Tahun '+t))})});
 GRADUASI.forEach(function(n){IDX.grad.push(add(n,'Anugerah Graduasi Murid Prasekolah','Prasekolah EHSAN'))});
@@ -938,6 +944,8 @@ Object.keys(SM_KEDUDUKAN).forEach(function(k){IDX.ked[k]=SM_KEDUDUKAN[k].map(fun
 SM_SUBJEK.forEach(function(x){Object.keys(x[1]).forEach(function(t){(IDX.sub[t]=IDX.sub[t]||[]).push(add(x[1][t],'Anugerah Mata Pelajaran Terbaik',x[0]+' · '+lvlName(t),null,'SMIIPSU'))})});
 SM_SAHSIAH.forEach(function(x){IDX.smSah.push(add(x[0],'Anugerah Sahsiah Murid (QR)','Kategori '+x[1]+' · SMIIPSU',null,'SMIIPSU'))});
 SM_HUFFAZ.forEach(function(x){IDX.smHuf.push(add(x[0],'Anugerah Huffaz Milenia',x[1],null,'SMIIPSU'))});
+SM_GRADUASI.forEach(function(n){IDX.smGrad.push(add(n,'Anugerah Graduasi Pelajar Tingkatan 5','Tingkatan 5 · SMIIPSU',null,'SMIIPSU'))});
+SM_KEHADIRAN.forEach(function(n){IDX.smHad.push(add(n,'Anugerah Kehadiran Terbaik','SMIIPSU',null,'SMIIPSU'))});
 var SCHOOL_NAME={EHSAN:'EHSAN Integrated School',SMIIPSU:'SMIIPSU'};
 
 /* Komponen gambar: crop ikut titik fokus, atau object-fit:cover sebagai asas */
@@ -967,13 +975,14 @@ function levelHTML(k){
     h+=podium(k);
     h+='<h3 class="sect">Anugerah Terbaik Prasekolah</h3><span class="rule"></span><div class="cards">'+IDX.pra.map(function(ri){return recipientCard(ri,REC[ri].a.replace('Anugerah ',''))}).join('')+'</div>';
   }else{
+    if(k==='T5')h+='<h3 class="sect">Anugerah Graduasi Pelajar Tingkatan 5</h3><span class="rule"></span><ul class="gradlist">'+IDX.smGrad.map(function(ri){return '<li><button type="button" data-rec="'+ri+'">'+esc(REC[ri].n)+'</button></li>'}).join('')+'</ul>';
     h+=podium(k);
     h+='<h3 class="sect">Anugerah Mata Pelajaran Terbaik</h3><span class="rule"></span><div class="subjects">'+(IDX.sub[k]||[]).map(function(ri){
       return '<button type="button" class="subj" data-rec="'+ri+'"><div class="sj">'+esc(REC[ri].d.split(' · ')[0])+'</div><div class="nm">'+esc(REC[ri].n)+'</div></button>'}).join('')+'</div>';
   }
   return h;
 }
-function levelCount(k){return IDX.ked[k].length+(k==='pra'?IDX.grad.length+IDX.pra.length:(IDX.sub[k]||[]).length)}
+function levelCount(k){return IDX.ked[k].length+(k==='pra'?IDX.grad.length+IDX.pra.length:(IDX.sub[k]||[]).length+(k==='T5'?IDX.smGrad.length:0))}
 document.getElementById('levelAccs').innerHTML=LEVELS.map(function(L){
   return '<details class="acc" name="anugerah" id="acc-'+L.k+'" data-k="'+L.k+'"><summary><span class="acc-t">'+L.t+'</span><span class="acc-n">'+levelCount(L.k)+' anugerah</span><i class="acc-ic" aria-hidden="true"></i></summary><div class="acc-b"></div></details>';
 }).join('');
@@ -984,6 +993,8 @@ document.getElementById('smSahsiah').innerHTML=IDX.smSah.map(function(ri){return
 document.getElementById('cntSmSahsiah').textContent=IDX.smSah.length+' penerima';
 document.getElementById('smHuffaz').innerHTML=IDX.smHuf.map(function(ri){return '<button type="button" class="subj" data-rec="'+ri+'"><div class="sj">'+esc(REC[ri].d)+'</div><div class="nm">'+esc(REC[ri].n)+'</div></button>'}).join('');
 document.getElementById('cntSmHuffaz').textContent=IDX.smHuf.length+' penerima';
+document.getElementById('smHadir').innerHTML=IDX.smHad.map(function(ri){return '<button type="button" class="subj" data-rec="'+ri+'"><div class="sj">Kehadiran Terbaik</div><div class="nm">'+esc(REC[ri].n)+'</div></button>'}).join('');
+document.getElementById('cntSmHadir').textContent=IDX.smHad.length+' penerima';
 document.getElementById('sahsiah').innerHTML=IDX.sah.map(function(ri){return recipientCard(ri,'')}).join('');
 document.getElementById('cntSahsiah').textContent=IDX.sah.length+' penerima';
 
